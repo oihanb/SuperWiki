@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ titulo_pagina }}</title>
+</head>
+<body>
+    <h1>{{ titulo_pagina }}</h1>
+    
+    {% if grupos %}
+        <ul>
+            {% for grupo in grupos %}
+                <li>
+                    <a href="{% url 'grupo_detail' grupo_id=grupo.id %}">
+                        <strong>{{ grupo.nombre }}</strong> 
+                    </a>
+                    (Editorial: {{ grupo.Editorial.nombre }})
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay grupos de superhéroes registrados.</p>
+    {% endif %}
+
+    <p><a href="{% url 'menu_principal' %}">Volver al Menú Principal</a></p>
+
+</body>
+</html>
