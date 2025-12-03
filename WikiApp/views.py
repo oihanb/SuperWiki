@@ -1,3 +1,4 @@
+# WikiApp/views.py (CONTENIDO COMPLETO Y CORRECTO)
 from django.shortcuts import render, get_object_or_404
 from .models import Editorial, GrupoDeSuperHeroes, SuperHeroe 
 
@@ -21,18 +22,16 @@ def editorial_list(request):
     return render(request, 'WikiApp/editorial_list.html', contexto) 
 
 
-# 4. VISTA DE LA LISTA DE GRUPOS
+# 4. VISTA DE LISTA DE GRUPOS (Para la lista completa)
 def grupo_list(request):
     grupos = GrupoDeSuperHeroes.objects.all()
     contexto = {'grupos': grupos, 'titulo_pagina': 'Listado de Grupos de Superhéroes'}
     return render(request, 'WikiApp/grupo_list.html', contexto) 
 
 
-# 5. VISTA DE DETALLE DEL GRUPO (La que estaba causando el error)
+# 5. VISTA DE DETALLE DEL GRUPO (Individual)
 def grupo_detail(request, grupo_id):
     grupo = get_object_or_404(GrupoDeSuperHeroes, pk=grupo_id)
-    
-    # Se obtienen los miembros del grupo (relación Many-to-Many)
     superheroes_del_grupo = grupo.SuperHeroe.all()
     
     contexto = {
@@ -41,3 +40,17 @@ def grupo_detail(request, grupo_id):
         'titulo_pagina': f'Miembros de: {grupo.nombre}'
     }
     return render(request, 'WikiApp/grupo_detail.html', contexto)
+
+
+# 6. VISTA NUEVA: FILTRADO DE GRUPOS POR EDITORIAL (La que usa el enlace)
+def editorial_grupos(request, editorial_id):
+    editorial = get_object_or_404(Editorial, pk=editorial_id)
+    # Usa el related_name para obtener solo los grupos de esa editorial
+    grupos = editorial.editorialGrupo.all()
+    
+    contexto = {
+        'grupos': grupos,
+        'titulo_pagina': f'Grupos de la Editorial: {editorial.nombre}'
+    }
+    # Reutilizamos la plantilla de lista de grupos
+    return render(request, 'WikiApp/grupo_list.html', contexto)
