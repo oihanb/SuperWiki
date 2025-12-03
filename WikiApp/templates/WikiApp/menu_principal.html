@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú Principal - SuperWiki</title>
+</head>
+<body>
+    <h1>Bienvenido a la SuperWiki</h1>
+    <h2>Selecciona el tipo de listado que deseas ver:</h2>
+
+    <p>
+        <a href="{% url 'superheroe_list' %}"><button>Lista de Superhéroes</button></a>
+        &nbsp;
+        <a href="{% url 'editorial_list' %}"><button>Editoriales</button></a>
+        &nbsp;
+        <a href="{% url 'grupo_list' %}"><button>Grupos de Superhéroes</button></a>
+    </p>
+    
+    <p>
+        <a href="{% url 'admin:index' %}">Ir al Panel de Administración</a>
+    </p>
+
+</body>
+</html>
