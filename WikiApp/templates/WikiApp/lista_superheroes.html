@@ -1,33 +1,70 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ titulo_pagina }}</title>
-</head>
-<body>
+{% load static %}
+{% extends 'WikiApp/base.html' %} 
+
+{% block content %}
     <h1>{{ titulo_pagina }}</h1>
     
     {% if superheroes %}
-        <ul>
+        <p>Haga clic en 'Ver Detalles' para cargar la información con AJAX (Interacción enriquecida).</p>
+        <ul id="superheroe-lista">
             {% for heroe in superheroes %}
                 <li>
                     {% if heroe.foto %} 
-                        <img src="{{ heroe.foto }}" alt="Foto de {{ heroe.nombre }}" width="100">
-                        <br>
+                        <img src="{{ heroe.foto }}" alt="Foto de {{ heroe.nombre }}" width="75" style="vertical-align: middle;">
+                        &nbsp;
                     {% endif %}
                     
-                    <strong>Nombre:</strong> {{ heroe.nombre }} <br>
-                    <strong>Poderes:</strong> {{ heroe.poderes }}
-                    </li>
+                    <strong>{{ heroe.nombre }}</strong> 
+                    
+                    <button 
+                        onclick="cargarDetalles('{{ heroe.id }}')" 
+                        data-heroe-id="{{ heroe.id }}">
+                        Ver Detalles (AJAX)
+                    </button>
+                    
+                    <div id="detalles-{{ heroe.id }}" style="margin-left: 20px; border: 1px solid #ccc; padding: 5px; display: none;">
+                        Cargando...
+                    </div>
+                </li>
             {% endfor %}
         </ul>
     {% else %}
-        <p>No hay superhéroes registrados. Asegúrate de añadir uno en el Panel de Administración.</p>
+        <p>No hay superhéroes registrados.</p>
     {% endif %}
 
     <p>
         <a href="{% url 'admin:index' %}">Ir al Panel de Administración</a>
     </p>
+{% endblock content %}
 
-</body>
-</html>
+{% block extra_js %}
+<script>
+    function cargarDetalles(heroeId) {
+        const detallesDiv = document.getElementById(`detalles-${heroeId}`);
+        const url = `/WikiApp/api/superheroes/${heroeId}/`;
+
+        // Si ya está abierto, lo cerramos
+        if (detallesDiv.style.display === 'block') {
+            detallesDiv.style.display = 'none';
+            return;
+        }
+
+        // Mostrar el div y la animación de carga
+        detallesDiv.style.display = 'block';
+        detallesDiv.innerHTML = "Cargando datos con AJAX...";
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                detallesDiv.innerHTML = `
+                    <p><strong>Poderes:</strong> ${data.poderes}</p>
+                    <p><strong>Nacimiento:</strong> ${data.nacimiento}</p>
+                `;
+            })
+            .catch(error => {
+                detallesDiv.innerHTML = 'Error al cargar los datos.';
+                console.error('Fetch error:', error);
+            });
+    }
+</script>
+{% endblock extra_js %}

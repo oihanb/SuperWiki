@@ -1,16 +1,16 @@
-# WikiApp/urls.py (CONTENIDO FINAL Y CORRECTO)
+# WikiApp/urls.py (CONTENIDO ACTUALIZADO)
 from django.urls import path
 from . import views
 
-urlpatterns = [ 
-    path('', views.menu_principal, name='menu_principal'), 
+urlpatterns=[
+    path('', views.MenuPrincipalView.as_view(), name='menu_principal'), 
     
-    path('superheroes/', views.superheroe_list, name='superheroe_list'),
-    path('editoriales/', views.editorial_list, name='editorial_list'), 
+    path('superheroes/', views.SuperheroeListView.as_view(), name='superheroe_list'),
+    path('editoriales/', views.EditorialListView.as_view(), name='editorial_list'), 
     
-    # RUTA NUEVA: DETALLE DE GRUPOS POR EDITORIAL (La que fallaba)
-    path('editoriales/<int:editorial_id>/', views.editorial_grupos, name='editorial_grupos'),
-
-    path('grupos/', views.grupo_list, name='grupo_list'), 
-    path('grupos/<int:grupo_id>/', views.grupo_detail, name='grupo_detail'), 
+    path('editoriales/<int:editorial_id>/', views.editorial_grupos, name='editorial_grupos'), # FBV se mantiene
+    
+    path('grupos/', views.GrupoListView.as_view(), name='grupo_list'), 
+    path('grupos/<int:grupo_id>/', views.GrupoDetailView.as_view(), name='grupo_detail'), 
+    path('api/superheroes/<int:heroe_id>/', views.superheroe_json, name='superheroe_json'),
 ]
