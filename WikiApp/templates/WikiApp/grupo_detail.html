@@ -6,23 +6,31 @@
 </head>
 <body>
     <h1>{{ titulo_pagina }}</h1>
+    <h2>Grupo: {{ grupo.nombre }}</h2>
     
-    {% if grupos %}
+    {% if superheroes %}
+        <h3>Miembros ({{ superheroes|length }}):</h3>
         <ul>
-            {% for grupo in grupos %}
+            {% for heroe in superheroes %}
                 <li>
-                    <a href="{% url 'grupo_detail' grupo_id=grupo.id %}">
-                        <strong>{{ grupo.nombre }}</strong> 
-                    </a>
-                    (Editorial: {{ grupo.Editorial.nombre }})
+                    {% if heroe.foto %} 
+                        <img src="{{ heroe.foto }}" alt="Foto de {{ heroe.nombre }}" width="75" style="vertical-align: middle;">
+                        &nbsp;
+                    {% endif %}
+                    
+                    <strong>{{ heroe.nombre }}</strong> | Poderes: {{ heroe.poderes }}
                 </li>
             {% endfor %}
         </ul>
     {% else %}
-        <p>No hay grupos de superhéroes registrados.</p>
+        <p>Este grupo aún no tiene superhéroes asignados.</p>
     {% endif %}
 
-    <p><a href="{% url 'menu_principal' %}">Volver al Menú Principal</a></p>
+    <p>
+        <a href="{% url 'grupo_list' %}">Volver a la Lista de Grupos</a>
+        |
+        <a href="{% url 'menu_principal' %}">Volver al Menú Principal</a>
+    </p>
 
 </body>
 </html>

@@ -11,6 +11,11 @@
         <ul>
             {% for editorial in editoriales %}
                 <li>
+                    {% if editorial.foto %} 
+                        <img src="{{ editorial.foto }}" alt="Logo de {{ editorial.nombre }}" width="100" style="vertical-align: middle;">
+                        &nbsp;
+                    {% endif %}
+                    
                     <a href="{% url 'editorial_grupos' editorial_id=editorial.id %}">
                         <strong>{{ editorial.nombre }}</strong>
                     </a>
