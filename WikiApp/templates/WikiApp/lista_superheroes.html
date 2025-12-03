@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ titulo_pagina }}</title>
+</head>
+<body>
+    <h1>{{ titulo_pagina }}</h1>
+    
+    {% if superheroes %}
+        <ul>
+            {% for heroe in superheroes %}
+                <li>
+                    {% if heroe.foto %} 
+                        <img src="{{ heroe.foto }}" alt="Foto de {{ heroe.nombre }}" width="100">
+                        <br>
+                    {% endif %}
+                    
+                    <strong>Nombre:</strong> {{ heroe.nombre }} <br>
+                    <strong>Poderes:</strong> {{ heroe.poderes }}
+                    </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay superhéroes registrados. Asegúrate de añadir uno en el Panel de Administración.</p>
+    {% endif %}
+
+    <p>
+        <a href="{% url 'admin:index' %}">Ir al Panel de Administración</a>
+    </p>
+
+</body>
+</html>
