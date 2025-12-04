@@ -4,8 +4,7 @@
 
 <head>
     <title>{{ titulo_pagina }}</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
-</head>
+    <link rel="stylesheet" href="../../static/style.css"></head>
 
 <body>
     <h2>{{ titulo_pagina }}</h2>
@@ -23,7 +22,7 @@
                     <strong>{{ heroe.nombre }}</strong> 
                     
                     <button onclick="cargarDetalles('{{ heroe.id }}')" data-heroe-id="{{ heroe.id }}">
-                        Ver Detalles (AJAX)
+                        Ver Detalles 
                     </button>
                     
                     <div id="detalles-{{ heroe.id }}" style="margin-left: 20px; border: 1px solid #ccc; padding: 5px; display: none;">
