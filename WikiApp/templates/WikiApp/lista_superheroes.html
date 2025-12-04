@@ -1,24 +1,28 @@
-{% load static %}
-{% extends 'WikiApp/base.html' %} 
+{% load static %} 
+<!DOCTYPE HTML>
+<html>
 
-{% block content %}
-    <h1>{{ titulo_pagina }}</h1>
+<head>
+    <title>{{ titulo_pagina }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+</head>
+
+<body>
+    <h2>{{ titulo_pagina }}</h2>
     
     {% if superheroes %}
-        <p>Haga clic en 'Ver Detalles' para cargar la información con AJAX (Interacción enriquecida).</p>
+        <p>Haga clic en 'Ver Detalles' para cargar la información con AJAX.</p>
         <ul id="superheroe-lista">
             {% for heroe in superheroes %}
                 <li>
                     {% if heroe.foto %} 
-                        <img src="{{ heroe.foto }}" alt="Foto de {{ heroe.nombre }}" width="75" style="vertical-align: middle;">
+                        <img src="{{ heroe.foto.url|default_if_none:'' }}" alt="Foto de {{ heroe.nombre }}" width="75" style="vertical-align: middle;">
                         &nbsp;
                     {% endif %}
                     
                     <strong>{{ heroe.nombre }}</strong> 
                     
-                    <button 
-                        onclick="cargarDetalles('{{ heroe.id }}')" 
-                        data-heroe-id="{{ heroe.id }}">
+                    <button onclick="cargarDetalles('{{ heroe.id }}')" data-heroe-id="{{ heroe.id }}">
                         Ver Detalles (AJAX)
                     </button>
                     
@@ -35,36 +39,38 @@
     <p>
         <a href="{% url 'admin:index' %}">Ir al Panel de Administración</a>
     </p>
-{% endblock content %}
 
-{% block extra_js %}
-<script>
-    function cargarDetalles(heroeId) {
-        const detallesDiv = document.getElementById(`detalles-${heroeId}`);
-        const url = `/WikiApp/api/superheroes/${heroeId}/`;
+    <script>
+        function cargarDetalles(heroeId) {
+            const detallesDiv = document.getElementById(`detalles-${heroeId}`);
+            const url = `/WikiApp/api/superheroes/${heroeId}/`; 
 
-        // Si ya está abierto, lo cerramos
-        if (detallesDiv.style.display === 'block') {
-            detallesDiv.style.display = 'none';
-            return;
+            // Lógica de AJAX (la misma que tenías antes)
+            if (detallesDiv.style.display === 'block') {
+                detallesDiv.style.display = 'none';
+                return;
+            }
+            detallesDiv.style.display = 'block';
+            detallesDiv.innerHTML = 'Cargando datos con AJAX...';
+
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    detallesDiv.innerHTML = `
+                        <p><strong>Poderes:</strong> ${data.poderes}</p>
+                        <p><strong>Nacimiento:</strong> ${data.nacimiento}</p>
+                    `;
+                })
+                .catch(error => {
+                    detallesDiv.innerHTML = 'Error al cargar los datos.';
+                    console.error('Fetch error:', error);
+                });
         }
-
-        // Mostrar el div y la animación de carga
-        detallesDiv.style.display = 'block';
-        detallesDiv.innerHTML = "Cargando datos con AJAX...";
-
-        fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                detallesDiv.innerHTML = `
-                    <p><strong>Poderes:</strong> ${data.poderes}</p>
-                    <p><strong>Nacimiento:</strong> ${data.nacimiento}</p>
-                `;
-            })
-            .catch(error => {
-                detallesDiv.innerHTML = 'Error al cargar los datos.';
-                console.error('Fetch error:', error);
-            });
-    }
-</script>
-{% endblock extra_js %}
+    </script>
+</body>
+</html>
