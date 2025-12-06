@@ -1,30 +1,43 @@
 from django.contrib import admin
+
+# Register your models here.
+from django.contrib import admin
 from .models import Editorial, GrupoDeSuperHeroes, SuperHeroe
 
-# Clase para el filtro Many-to-Many
+
+
+class EditorialAdmin(admin.ModelAdmin):
+    fieldsets = [
+        (None, {'fields': ['nombre', 'propietario']}),
+        ('Fundación', {'fields': ['anoFundacion']}),
+        ('Imagen', {'fields': ['imagenEditorial']})
+    ]
+    
+    list_display=('nombre','propietario','anoFundacion')
+    #search_fields = ['nombre', 'propietario']
+    #list_filter = ['anoFundacion']
+
+admin.site.register(Editorial, EditorialAdmin)
+
+
 class GrupoDeSuperHeroesAdmin(admin.ModelAdmin):
-    filter_horizontal = ('SuperHeroe',)
-
-# CLASE NUEVA para personalizar permisos en SuperHeroe
-class SuperheroeAdmin(admin.ModelAdmin):
-    list_display = ('nombre', 'poderes', 'Fnacimiento') # Pequeña mejora visual
-    
-    # Lógica para permisos (Asumiendo que existe un grupo 'Administradores')
-    def has_change_permission(self, request, obj=None):
-        # Permite la edición si es Superuser O si pertenece al grupo 'Administradores'
-        if request.user.is_superuser:
-            return True
-        return request.user.groups.filter(name='Administradores').exists()
-    
-    def has_delete_permission(self, request, obj=None):
-        # Los mismos permisos para eliminar
-        return self.has_change_permission(request, obj)
-    
-    def has_add_permission(self, request):
-        # Los mismos permisos para añadir (opcional, pero consistente)
-        return self.has_change_permission(request)
-
-# Registro de Modelos con las clases personalizadas
-admin.site.register(Editorial)
+    fieldsets = [
+        (None,{'fields':['nombre']}),
+        ('Editorial',{'fields':['editorial']})
+    ]
+    list_display=('nombre','editorial')
+    #list_filter = ['Editorial']
+    #search_fields = ['nombre']
 admin.site.register(GrupoDeSuperHeroes, GrupoDeSuperHeroesAdmin)
-admin.site.register(SuperHeroe, SuperheroeAdmin) # ¡Registrado con la clase personalizada!
+
+class SuperheroeAdmin(admin.ModelAdmin):
+    fieldsets = [
+        ('Datos Personales',{'fields':['nombre','Fnacimiento']}),
+        ('Poderes',{'fields':['poderes']}),
+        ('Imagen',{'fields':['imagenSuperHeroe']})
+    ]
+    list_display=('nombre','Fnacimiento','poderes')
+    #search_fields = ['nombre', 'poderes']
+admin.site.register(SuperHeroe, SuperheroeAdmin) 
+
+

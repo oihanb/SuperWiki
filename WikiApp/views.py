@@ -1,76 +1,45 @@
-from django.http import JsonResponse
+from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView, DetailView, TemplateView # Nuevas importaciones
 from .models import Editorial, GrupoDeSuperHeroes, SuperHeroe 
 
-# 1. MENÚ PRINCIPAL (TemplateView)
-class MenuPrincipalView(TemplateView):
-    template_name = 'WikiApp/menu_principal.html'
+from django.views.generic import ListView,DetailView
 
-# 2. LISTA DE SUPERHÉROES (ListView)
-class SuperheroeListView(ListView):
-    model = SuperHeroe
-    template_name = 'WikiApp/lista_superheroes.html'
-    context_object_name = 'superheroes' # Nombre usado en la plantilla
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['titulo_pagina'] = 'Lista Completa de Superhéroes'
-        return context
+# Vistas de lista
+def index(request):
+    return render(request, 'index.html')
 
-# 3. LISTA DE EDITORIALES (ListView)
-class EditorialListView(ListView):
-    model = Editorial
-    template_name = 'WikiApp/editorial_list.html'
-    context_object_name = 'editoriales'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['titulo_pagina'] = 'Listado de Editoriales'
-        return context
+#VISTAS EDITORIAL
+class detalleEditorial(DetailView):
+    model=Editorial
+    template_name='detalleeditorial.html'
+    context_object_name='editorial'
 
-# 4. LISTA DE GRUPOS (ListView)
-class GrupoListView(ListView):
-    model = GrupoDeSuperHeroes
-    template_name = 'WikiApp/grupo_list.html'
-    context_object_name = 'grupos'
+class listaEditorial(ListView):
+    model= Editorial
+    template_name='listaeditorial.html'
+    context_object_name='editorial_list'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['titulo_pagina'] = 'Listado de Grupos de Superhéroes'
-        return context
-    
-# 5. VISTA DE DETALLE DEL GRUPO (DetailView)
-class GrupoDetailView(DetailView):
-    model = GrupoDeSuperHeroes
-    template_name = 'WikiApp/grupo_detail.html'
-    pk_url_kwarg = 'grupo_id' # Usa el nombre del parámetro en la URL
-    context_object_name = 'grupo'
+#VISTAS GRUPOSDESUPERHEROES
+class detalleGrupoDeSuperHeroes(DetailView):
+    model=GrupoDeSuperHeroes
+    template_name='grupodesuperheroes.html'
+    context_object_name='grupodesuperheroes'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        grupo = self.get_object()
-        context['superheroes'] = grupo.SuperHeroe.all() # Acceso a miembros
-        context['titulo_pagina'] = f'Miembros de: {grupo.nombre}'
-        return context
+class listaGrupoDeSuperHeroes(ListView):
+    model= GrupoDeSuperHeroes
+    template_name='listagrupodesuperheroes.html'
+    context_object_name='grupodesuperheroes_list'
 
-# 6. VISTA DE FILTRADO (Se mantiene como Función-Basada por la lógica de filtrado personalizada)
-def editorial_grupos(request, editorial_id):
-    editorial = get_object_or_404(Editorial, pk=editorial_id)
-    grupos = editorial.editorialGrupo.all() 
-    contexto = {
-        'grupos': grupos,
-        'titulo_pagina': f'Grupos de la Editorial: {editorial.nombre}'
-    }
-    return render(request, 'WikiApp/grupo_list.html', contexto)
-def superheroe_json(request, heroe_id):
-    heroe = get_object_or_404(SuperHeroe, pk=heroe_id)
-    
-    # Devolver datos en formato JSON
-    data = {
-        'nombre': heroe.nombre,
-        'poderes': heroe.poderes,
-        'nacimiento': heroe.Fnacimiento,
-        'foto_url': heroe.foto if heroe.foto else None
-    }
-    return JsonResponse(data)
+#VISTAS SUPERHEROES
+class detalleSuperHeroe(DetailView):
+    model=SuperHeroe
+    template_name='detallesuperheroe.html'
+    context_object_name='superheroe'
+
+class listaSuperHeroe(ListView):
+    model= SuperHeroe
+    template_name='listasuperheroes.html'
+    context_object_name='superheroes_list'
+    queryset=SuperHeroe.objects.order_by('nombre')

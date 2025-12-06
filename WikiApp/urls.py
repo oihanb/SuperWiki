@@ -1,16 +1,27 @@
-# WikiApp/urls.py (CONTENIDO ACTUALIZADO)
-from django.urls import path
+from django.contrib import admin
+from django.urls import path,include
 from . import views
 
-urlpatterns=[
-    path('', views.MenuPrincipalView.as_view(), name='menu_principal'), 
-    
-    path('superheroes/', views.SuperheroeListView.as_view(), name='superheroe_list'),
-    path('editoriales/', views.EditorialListView.as_view(), name='editorial_list'), 
-    
-    path('editoriales/<int:editorial_id>/', views.editorial_grupos, name='editorial_grupos'), # FBV se mantiene
-    
-    path('grupos/', views.GrupoListView.as_view(), name='grupo_list'), 
-    path('grupos/<int:grupo_id>/', views.GrupoDetailView.as_view(), name='grupo_detail'), 
-    path('api/superheroes/<int:heroe_id>/', views.superheroe_json, name='superheroe_json'),
+
+urlpatterns = [
+    path('inicio',views.index,name='index'),
+
+    #LISTADO EDITORIALES
+    #path('listaConfederaciones/', views.listaConfederacion,name='listaConfederacion'),
+    path('listaEditoriales/',views.listaEditorial.as_view(),name='listaEditorial'),
+    #DETALLE DE EDITORIALES
+    #path('detalleConfederacion/<int:id_confederacion>/', views.detalleConfederacion,name='detalleConfederacion'),
+    path('detalleEditorial/<int:pk>', views.detalleEditorial.as_view(),name='detalleEditorial'),
+    #LISTADO DE GRUPODESUPERHEROES
+    #path('listaSelecciones/', views.listaSeleccion,name='listaSeleccion'),
+    path('listagrupodesuperheroes/', views.listaGrupoDeSuperHeroes.as_view(),name='listaGrupoDeSuperHeroes'),
+    #DETALLE DE GRUPODESUPERHEROES
+    #path('detalleSeleccion/<int:id_seleccion>/', views.detalleSeleccion,name='detalleSeleccion'),
+    path('detalleGrupoDeSuperHeroes/<int:pk>/', views.detalleGrupoDeSuperHeroes.as_view(),name='detalleGrupoDeSuperHeroes'),
+    #LISTADO DE SUPERHEROE
+    #path('listaFutbolistas/', views.listaFutbolista,name='listaFutbolista'),
+    path('listaSuperHeroes/', views.listaSuperHeroe.as_view(),name='listaSuperHeroes'),
+    #DETALLE DE SUPERHEROES
+    #path('detalleFutbolista/<int:id_futbolista>/', views.detalleFutbolista,name='detalleFutbolista')
+    path('detalleSuperHeroes/<int:pk>/', views.detalleSuperHeroe.as_view(),name='detalleSuperHeroe')
 ]
