@@ -23,9 +23,9 @@ admin.site.register(Editorial, EditorialAdmin)
 class GrupoDeSuperHeroesAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,{'fields':['nombre']}),
-        ('Editorial',{'fields':['editorial']})
+        ('Editorial',{'fields':['Editorial']})
     ]
-    list_display=('nombre','editorial')
+    list_display=('nombre','Editorial')
     #list_filter = ['Editorial']
     #search_fields = ['nombre']
 admin.site.register(GrupoDeSuperHeroes, GrupoDeSuperHeroesAdmin)
