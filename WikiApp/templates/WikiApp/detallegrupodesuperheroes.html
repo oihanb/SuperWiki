@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'WikiApp/base.html' %}
 {% block contenido %}
 <html>
 <head>
@@ -14,7 +14,7 @@
         <tr><th>Imagen</th>
             <th>Nombre</th>
             <th>Poderes</th></tr>
-    {% for superheroes in grupodesuperheroes.superheroes.all %}
+    {% for superheroes in grupodesuperheroes.SuperHeroe.all %}
         <tr><td>
         {% if superheroes.imagenSuperHeroe %}
             <img class="imagenSuperHeroe" src="{{superheroes.imagenSuperHeroe}}" alt="imagen" style="width:70px"  >
@@ -27,8 +27,8 @@
     </td>
     
         <td>
-            <a href="{% url 'detallesuperheroes' superheroe.id%}">
-                {{superheroes.nombre }} {{superheroes.Fnacimiento}}
+            <a href="{% url 'detallesuperheroes' superheroes.id %}">
+                {{ superheroes.nombre }} {{ superheroes.Fnacimiento }}
             </a>
         </td>
         <td>

@@ -1,0 +1,22 @@
+{% extends 'WikiApp/base.html' %}
+{% block contenido %}
+<html>
+<head>
+    <title>Detalle del SuperHeroe</title>
+</head>
+<body>
+    <h1>Detalle del SuperHeroe</h1>
+    <p>ID: {{ superheroe.id }}</p>
+    <p>Nombre: {{ superheroe.nombre }}</p>
+    <p>Fecha de nacimiento: {{ superheroe.Fnacimiento }}</p>
+    <p>Poderes: {{ superheroe.poderes }}</p>
+    {% if superheroe.imagenSuperHeroe %}
+        <p>Imagen:</p>
+        <img class="imagenSuperHeroe" src="{{ superheroe.imagenSuperHeroe }}" alt="imagen" style="width:300px" >
+    {% else %}
+        <p>No hay imagen disponible para este SuperHeroe.</p>
+    {% endif %}
+
+</body>
+</html>
+{% endblock %}

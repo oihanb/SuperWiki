@@ -1,0 +1,22 @@
+{% extends 'WikiApp/base.html' %}
+{% block contenido %}
+<div id="content">
+    <h1>Menú Principal</h1>
+    <p>Elige una opción:</p>
+    
+    <div class="menu-section">
+        <h3>Lista de Editoriales</h3>
+        <p><a href="{% url 'listaeditorial' %}">Ver Lista de Editoriales</a></p>
+    </div>
+    
+    <div class="menu-section">
+        <h3>Lista de Grupos de SuperHeroes</h3>
+        <p><a href="{% url 'listagrupodesuperheroes' %}">Ver Lista de Grupos De SuperHeroes</a></p>
+    </div>
+    
+    <div class="menu-section">
+        <h3>Lista de SuperHeroes</h3>
+        <p><a href="{% url 'listasuperheroes' %}">Ver Lista de SuperHeroes</a></p>
+    </div>
+</div>
+{% endblock %}
