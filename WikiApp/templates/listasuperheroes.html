@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block contenido %}
+{% for superheroes in superheroes_list%}
+
+
+
+<a href="{% url 'detallesuperheroes' superheroes.id%}"> 
+    <h1> {{ superheroes.nombre }} {{superheroes.Fnacimiento}}</h1> 
+</a>
+{% empty %}
+
+    <p>No hay superheroes disponibles.</p>
+
+{% endfor %}
+
+
+{% endblock %}

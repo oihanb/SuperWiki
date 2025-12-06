@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<html>
+<head>
+    <title>Detalle del grupo de superheroes</title>
+</head>
+<body>
+    <h1>Detalle del grupo de superheroes</h1>
+    <p>Nombre: {{ grupodesuperheroes.nombre }}</p>
+    <p>Editorial: {{ grupodesuperheroes.editorial }}</p>
+    <h2>SuperHeroes</h2>
+    <div id="tabla">
+    <table>
+        <tr><th>Imagen</th>
+            <th>Nombre</th>
+            <th>Poderes</th></tr>
+    {% for superheroes in grupodesuperheroes.superheroes.all %}
+        <tr><td>
+        {% if superheroes.imagenSuperHeroe %}
+            <img class="imagenSuperHeroe" src="{{superheroes.imagenSuperHeroe}}" alt="imagen" style="width:70px"  >
+        {% else %}
+           <img class="imagenSuperHeroe" src="../static/style/SuperHeroeSinFoto.png" alt="imagen" style="width:70px">
+        {%endif%}
+
+
+       
+    </td>
+    
+        <td>
+            <a href="{% url 'detallesuperheroes' superheroe.id%}">
+                {{superheroes.nombre }} {{superheroes.Fnacimiento}}
+            </a>
+        </td>
+        <td>
+            {{superheroes.poderes}}
+        </td>
+        
+    {% empty %}
+        <td>No hay superheroes asociados a esta Editorial</td>
+    {% endfor %}
+        </tr>
+    </table>
+    </div>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block contenido %}
+
+{% for grupodesuperheroes in grupodesuperheroes}
+
+
+
+<a href="{% url 'detallegrupodesuperheroes' grupodesuperheroes.id%}">
+    <h1> {{ grupodesuperheroes.nombre }}</h1>   
+</a>
+{% empty %}
+
+    <p>No hay marcas disponibles.</p>
+
+{% endfor %}
+
+
+{% endblock %}

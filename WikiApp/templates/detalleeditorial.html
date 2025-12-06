@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<html>
+<head>
+    <title>Detalle de la Editorial</title>
+</head>
+<body>
+    <h1>Detalle de la Editorial</h1>
+    <p>Nombre: {{ editorial.nombre }}</p>
+    <p>Año de Fundacion: {{ editorial.anoFundacion }}</p>
+    <p>Propietario: {{ editorial.propietario }}</p>
+    <h2>Grupos de SuperHeroes</h2>
+    <ul>
+    {% for gruposdesuperheroes in editorial.gruposdesuperheroes.all %}
+        <li>
+            <a href="{% url 'detallegruposdesuperheroes' gruposdesuperheroes.id %}">
+                {{ gruposdesuperheroes.nombre }}
+            </a>
+        </li>
+    {% empty %}
+        <li>No hay grupos de superheroes asociados a esta editorial.</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
+{% endblock %}

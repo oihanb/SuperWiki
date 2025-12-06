@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>WikiApp SuperHeroes </title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="{%static 'style/style.css'%}" title="style" />
+
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="{% url 'index'%}">WikiApp<span class="logo_colour"> SuperHeroes</span></a></h1>
+          <h2>Informacion sobre Editoriales, Grupos de SuperHeroes y SuperHeroes</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="{% url 'index'%}">Inicio</a></li>
+           <li><a href="{%url 'listaeditorial'%}">Editoriales</a></li>
+          <li><a href="{%url 'listagrupodesuperheroes'%}">Grupos de SuperHeroes</a></li>
+          <li><a href="{%url 'listasuperheroes'%}">SuperHeroes</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+        <!-- insert your sidebar items here -->
+        <h3>Sobre Nosotros</h3>
+        <h4>¿De que va este proyecto?</h4>
+        <h5>Proyecto de Ingenieria Web 2025-2026</h5>
+        <p> Es un proyecto trabajado con HTML, Python y Django. El proyecto trata sobre una aplicación para podere buscar información sobre SuperHeroes.
+          <br />
+        <p></p>
+        <h4>¿Quienes somos?</h4>
+        <h5>Ingenieria Deusto</h5>
+        <p> Somos dos alumnos cursando la asignatura de Ingenieria Web de la Universidad de Deusto. 
+          <br />
+        <h3>Autores</h3>
+        <ul>
+          <li>Gaizka Gredilla Yarritu</li>
+          <li>Oihan Bilbao Perez</li>
+        </ul>
+        
+      </div>
+      <div id="content">
+        {% block contenido %}{%endblock%}
+      </div>
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+      Copyright &copy; colour_purple | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.html5webtemplates.co.uk">HTML5 Web Templates</a>
+    </div>
+  </div>
+  
+  <script src="{% static 'style/js/BotonFactou.js' %}"></script>
+  <script src="{% static 'style/js/hora.js' %}"></script>
+
+</body>
+</html>
