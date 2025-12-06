@@ -1,9 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>{{ titulo_pagina }}</title>
     <link rel="stylesheet" href="../../../static/style.css"></head>
+    <link rel="icon" type="image/png" href="{% static 'SuperLogo.png' %}">
+
 <body>
     <h1>{{ titulo_pagina }}</h1>
     <h2>Grupo: {{ grupo.nombre }}</h2>
