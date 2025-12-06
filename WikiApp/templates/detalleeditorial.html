@@ -11,10 +11,10 @@
     <p>Propietario: {{ editorial.propietario }}</p>
     <h2>Grupos de SuperHeroes</h2>
     <ul>
-    {% for gruposdesuperheroes in editorial.gruposdesuperheroes.all %}
+    {% for grupo in editorial.editorialGrupo.all %} 
         <li>
-            <a href="{% url 'detallegruposdesuperheroes' gruposdesuperheroes.id %}">
-                {{ gruposdesuperheroes.nombre }}
+            <a href="{% url 'detallegrupodesuperheroes' pk=grupo.pk %}">
+                {{ grupo.nombre }}
             </a>
         </li>
     {% empty %}
