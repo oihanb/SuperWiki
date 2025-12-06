@@ -1,4 +1,5 @@
 {% extends 'WikiApp/base.html' %}
+{% load i18n %}
 {% block contenido %}
 
 {% for grupodesuperheroes in grupodesuperheroes_list%}
@@ -10,7 +11,7 @@
 </a>
 {% empty %}
 
-    <p>No hay marcas disponibles.</p>
+    <p>{% trans "No groups available." %}</p>
 
 {% endfor %}
 

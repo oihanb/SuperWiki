@@ -1,29 +1,28 @@
 {% extends 'WikiApp/base.html' %}
+{% load static i18n %}
 {% block contenido %}
 <html>
 <head>
-    <title>Detalle del grupo de superheroes</title>
+    <title>{% trans "Group Details" %}</title>
 </head>
 <body>
-    <h1>Detalle del grupo de superheroes</h1>
-    <p>Nombre: {{ grupodesuperheroes.nombre }}</p>
-    <p>Editorial: {{ grupodesuperheroes.editorial }}</p>
-    <h2>SuperHeroes</h2>
+    <h1>{% trans "Group Details" %}</h1>
+    <p>{% trans "Name" %}: {{ grupodesuperheroes.nombre }}</p>
+    <p>{% trans "Editorial" %}: {{ grupodesuperheroes.editorial }}</p>
+    <h2>{% trans "SuperHeroes" %}</h2>
     <div id="tabla">
     <table>
-        <tr><th>Imagen</th>
-            <th>Nombre</th>
-            <th>Poderes</th></tr>
+        <tr><th>{% trans "Image" %}</th>
+            <th>{% trans "Name" %}</th>
+            <th>{% trans "Powers" %}</th></tr>
     {% for superheroes in grupodesuperheroes.SuperHeroe.all %}
         <tr><td>
         {% if superheroes.imagenSuperHeroe %}
-            <img class="imagenSuperHeroe" src="{{superheroes.imagenSuperHeroe}}" alt="imagen" style="width:70px"  >
+            <img class="imagenSuperHeroe" src="{{ superheroes.imagenSuperHeroe }}" alt="{% trans 'image' %}" style="width:70px"  >
         {% else %}
-           <img class="imagenSuperHeroe" src="../static/style/SuperHeroeSinFoto.png" alt="imagen" style="width:70px">
-        {%endif%}
+           <img class="imagenSuperHeroe" src="{% static 'style/SuperHeroeSinFoto.png' %}" alt="{% trans 'no image' %}" style="width:70px">
+        {% endif %}
 
-
-       
     </td>
     
         <td>
@@ -32,11 +31,11 @@
             </a>
         </td>
         <td>
-            {{superheroes.poderes}}
+            {{ superheroes.poderes }}
         </td>
         
     {% empty %}
-        <td>No hay superheroes asociados a esta Editorial</td>
+        <tr><td colspan="3">{% trans "No superheroes associated to this Editorial" %}</td></tr>
     {% endfor %}
         </tr>
     </table>

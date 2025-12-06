@@ -1,7 +1,8 @@
 {% extends 'WikiApp/base.html' %}
+{% load i18n %}
 {% block contenido %}
 
-<h1>Listado de las Editoriales</h1>
+<h1>{% trans "List of Editorials" %}</h1>
 
 {% for editorial in editorial_list%}
 
@@ -13,7 +14,7 @@
 
 {% empty %}
 
-    <p>No hay marcas disponibles.</p>
+    <p>{% trans "No editorials available." %}</p>
 
 {% endfor %}
 

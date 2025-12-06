@@ -1,0 +1,235 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SuperWiki\n"
+"POT-Creation-Date: 2025-12-06 00:00+0000\n"
+"PO-Revision-Date: 2025-12-06 00:00+0000\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Main Menu"
+msgstr "Menú Principal"
+
+msgid "Choose an option:"
+msgstr "Elige una opción:"
+
+msgid "Editorials"
+msgstr "Editoriales"
+
+msgid "View Editorials list"
+msgstr "Ver Lista de Editoriales"
+
+msgid "SuperHero Groups"
+msgstr "Grupos de SuperHeroes"
+
+msgid "View Groups list"
+msgstr "Ver Lista de Grupos De SuperHeroes"
+
+msgid "SuperHeroes"
+msgstr "SuperHeroes"
+
+msgid "View SuperHeroes list"
+msgstr "Ver Lista de SuperHeroes"
+
+msgid "Home"
+msgstr "Inicio"
+
+msgid "Language"
+msgstr "Idioma"
+
+msgid "Information about Editorials, SuperHero Groups and SuperHeroes"
+msgstr "Información sobre Editoriales, Grupos de SuperHeroes y SuperHeroes"
+
+msgid "About Us"
+msgstr "Sobre Nosotros"
+
+msgid "What is this project about?"
+msgstr "¿De qué va este proyecto?"
+
+msgid "Web Engineering Project 2025-2026"
+msgstr "Proyecto de Ingeniería Web 2025-2026"
+
+msgid "This project is developed with HTML, Python and Django. The project allows searching information about SuperHeroes."
+msgstr "Este proyecto está desarrollado con HTML, Python y Django. El proyecto permite buscar información sobre SuperHeroes."
+
+msgid "Read more"
+msgstr "Leer más"
+
+msgid "Who are we?"
+msgstr "¿Quiénes somos?"
+
+msgid "Authors"
+msgstr "Autores"
+
+msgid "Search"
+msgstr "Buscar"
+
+msgid "Enter keywords....."
+msgstr "Introduce palabras clave....."
+
+msgid "List of Editorials"
+msgstr "Listado de Editoriales"
+
+msgid "No editorials available."
+msgstr "No hay editoriales disponibles."
+
+msgid "Editorial Details"
+msgstr "Detalles de la Editorial"
+
+msgid "Name"
+msgstr "Nombre"
+
+msgid "Year founded"
+msgstr "Año de fundación"
+
+msgid "Owner"
+msgstr "Propietario"
+
+msgid "No superhero groups associated to this editorial."
+msgstr "No hay grupos de superhéroes asociados a esta editorial."
+
+msgid "No superheroes available."
+msgstr "No hay superhéroes disponibles."
+
+msgid "No groups available."
+msgstr "No hay grupos disponibles."
+
+msgid "Group Details"
+msgstr "Detalles del Grupo"
+
+msgid "Editorial"
+msgstr "Editorial"
+
+msgid "Image"
+msgstr "Imagen"
+
+msgid "Powers"
+msgstr "Poderes"
+
+msgid "image"
+msgstr "imagen"
+
+msgid "no image"
+msgstr "sin imagen"
+
+msgid "No superheroes associated to this Editorial"
+msgstr "No hay superhéroes asociados a esta Editorial"
+
+msgid "SuperHero Details"
+msgstr "Detalles del SuperHéroe"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Date of birth"
+msgstr "Fecha de nacimiento"
+
+msgid "No image available for this SuperHero"
+msgstr "No hay imagen disponible para este SuperHéroe"
+
+msgid "WikiApp SuperHeroes"
+msgstr "WikiApp SuperHeroes"
+
+msgid "website description"
+msgstr "descripción del sitio web"
+
+msgid "website keywords, website keywords"
+msgstr "palabras clave del sitio web, palabras clave del sitio web"
+
+msgid "Groups"
+msgstr "Grupos"
+
+msgid "colour_purple - contact us"
+msgstr "colour_purple - contáctanos"
+
+msgid "Simple. Contemporary. Website Template."
+msgstr "Plantilla Web Simple. Contemporánea."
+
+msgid "Contact Us"
+msgstr "Contáctanos"
+
+msgid "Contact us"
+msgstr "Contáctanos"
+
+msgid "Email"
+msgstr "Correo Electrónico"
+
+msgid "Message"
+msgstr "Mensaje"
+
+msgid "Submit"
+msgstr "Enviar"
+
+msgid "colour_purple - examples"
+msgstr "colour_purple - ejemplos"
+
+msgid "Examples"
+msgstr "Ejemplos"
+
+msgid "Latest News"
+msgstr "Últimas Noticias"
+
+msgid "New Website Launched"
+msgstr "Nuevo Sitio Web Lanzado"
+
+msgid "January 1st, 2010"
+msgstr "1 de enero de 2010"
+
+msgid "2010 sees the redesign of our website. Take a look around and let us know what you think."
+msgstr "2010 ve el rediseño de nuestro sitio web. Echa un vistazo y cuéntanos qué te parece."
+
+msgid "Useful Links"
+msgstr "Enlaces Útiles"
+
+msgid "link 1"
+msgstr "enlace 1"
+
+msgid "link 2"
+msgstr "enlace 2"
+
+msgid "link 3"
+msgstr "enlace 3"
+
+msgid "link 4"
+msgstr "enlace 4"
+
+msgid "A Page"
+msgstr "Una Página"
+
+msgid "Another Page"
+msgstr "Otra Página"
+
+msgid "Copyright"
+msgstr "Derechos de Autor"
+
+msgid "HTML5"
+msgstr "HTML5"
+
+msgid "CSS"
+msgstr "CSS"
+
+msgid "HTML5 Web Templates"
+msgstr "Plantillas Web HTML5"
+
+msgid "WikiApp"
+msgstr "WikiApp"
+
+msgid "English"
+msgstr "Inglés"
+
+msgid "Spanish"
+msgstr "Español"
+
+msgid "Basque"
+msgstr "Euskera"
+
+msgid "It is a project developed with HTML, Python and Django. The project is about an application to search information about SuperHeroes."
+msgstr "Es un proyecto desarrollado con HTML, Python y Django. El proyecto trata sobre una aplicación para buscar información sobre SuperHeroes."
+
+msgid "Deusto Engineering"
+msgstr "Ingeniería Deusto"
+
+msgid "We are two students studying the Web Engineering course at the University of Deusto."
+msgstr "Somos dos alumnos estudiando el curso de Ingeniería Web en la Universidad de Deusto."
+

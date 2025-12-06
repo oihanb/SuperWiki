@@ -1,12 +1,13 @@
+{% load static i18n %}
 <!DOCTYPE HTML>
 <html>
 
 <head>
-  <title>colour_purple - contact us</title>
-  <meta name="description" content="website description" />
-  <meta name="keywords" content="website keywords, website keywords" />
-  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
-  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+  <title>{% trans "colour_purple - contact us" %}</title>
+  <meta name="description" content="{% trans "website description" %}" />
+  <meta name="keywords" content="{% trans "website keywords, website keywords" %}" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" title="style" />
 </head>
 
 <body>
@@ -16,17 +17,17 @@
         <div id="logo_text">
           <!-- class="logo_colour", allows you to change the colour of the text -->
           <h1><a href="index.html">colour<span class="logo_colour">purple</span></a></h1>
-          <h2>Simple. Contemporary. Website Template.</h2>
+          <h2>{% trans "Simple. Contemporary. Website Template." %}</h2>
         </div>
       </div>
       <div id="menubar">
         <ul id="menu">
           <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-          <li><a href="index.html">Home</a></li>
-          <li><a href="examples.html">Examples</a></li>
-          <li><a href="page.html">A Page</a></li>
-          <li><a href="another_page.html">Another Page</a></li>
-          <li class="selected"><a href="contact.html">Contact Us</a></li>
+          <li><a href="index.html">{% trans "Home" %}</a></li>
+          <li><a href="examples.html">{% trans "Examples" %}</a></li>
+          <li><a href="page.html">{% trans "A Page" %}</a></li>
+          <li><a href="another_page.html">{% trans "Another Page" %}</a></li>
+          <li class="selected"><a href="contact.html">{% trans "Contact Us" %}</a></li>
         </ul>
       </div>
     </div>
@@ -34,39 +35,39 @@
     <div id="site_content">
       <div class="sidebar">
       <!-- insert your sidebar items here -->
-      <h3>Sobre Nosotros</h3>
-      <h4>¿De que va este proyecto?</h4>
-      <h5>Proyecto de Ingenieria Web 2025-2026</h5>
-      <p> Es un proyecto trabajado con HTML, Python y Django. El proyecto trata sobre una aplicación para podere buscar información sobre SuperHeroes.
+      <h3>{% trans "About Us" %}</h3>
+      <h4>{% trans "What is this project about?" %}</h4>
+      <h5>{% trans "Web Engineering Project 2025-2026" %}</h5>
+      <p>{% blocktrans %}This project is developed with HTML, Python and Django. The project allows searching information about SuperHeroes.{% endblocktrans %}
           <br />
-        <br /><a href="#">Read more</a></p>
+        <br /><a href="#">{% trans "Read more" %}</a></p>
       <p></p>
-      <h4>¿Quienes somos?</h4>
-      <h5>Ingenieria Deusto</h5>
-      <p> Somos dos alumnos cursando la asignatura de Ingenieria Web de la Universidad de Deusto. 
-        <br /><a href="#">Read more</a></p>
-      <h3>Autores</h3>
+      <h4>{% trans "Who are we?" %}</h4>
+      <h5>{% trans "Deusto Engineering" %}</h5>
+      <p>{% trans "We are two students studying the Web Engineering course at the University of Deusto." %} 
+        <br /><a href="#">{% trans "Read more" %}</a></p>
+      <h3>{% trans "Authors" %}</h3>
       <ul>
         <li>Gaizka Gredilla</li>
         <li>Oihan Bilbao Perez</li>
       </ul>
-      <h3>Search</h3>
+      <h3>{% trans "Search" %}</h3>
       <form method="post" action="#" id="search_form">
         <p>
-          <input class="search" type="text" name="search_field" value="Enter keywords....." />
-          <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />
+          <input class="search" type="text" name="search_field" value="{% trans "Enter keywords....." %}" />
+          <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="{% static 'style/search.png' %}" alt="{% trans 'Search' %}" title="{% trans 'Search' %}" />
         </p>
       </form>
       </div>
       <div id="content">
         <!-- insert the page content here -->
-        <h1>Contactanos</h1>
+        <h1>{% trans "Contact us" %}</h1>
         <form action="#" method="post">
           <div class="form_settings">
-            <p><span>Nombre</span><input class="contact" type="text" name="your_name" value="" /></p>
-            <p><span>Email</span><input class="contact" type="text" name="your_email" value="" /></p>
-            <p><span>Mensaje</span><textarea class="contact textarea" rows="8" cols="50" name="your_enquiry"></textarea></p>
-            <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="submit" /></p>
+            <p><span>{% trans "Name" %}</span><input class="contact" type="text" name="your_name" value="" /></p>
+            <p><span>{% trans "Email" %}</span><input class="contact" type="text" name="your_email" value="" /></p>
+            <p><span>{% trans "Message" %}</span><textarea class="contact textarea" rows="8" cols="50" name="your_enquiry"></textarea></p>
+            <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="{% trans "Submit" %}" /></p>
           </div>
         </form>
       </div>

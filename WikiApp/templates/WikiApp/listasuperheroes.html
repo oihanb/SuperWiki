@@ -1,15 +1,16 @@
 {% extends 'WikiApp/base.html' %}
+{% load i18n %}
 {% block contenido %}
-{% for superheroes in superheroes_list%}
+{% for superheroes in superheroes_list %}
 
 
 
-<a href="{% url 'detallesuperheroes' superheroes.id%}"> 
-    <h1> {{ superheroes.nombre }} {{superheroes.Fnacimiento}}</h1> 
+<a href="{% url 'detallesuperheroes' superheroes.id %}">
+    <h1>{{ superheroes.nombre }} {{ superheroes.Fnacimiento }}</h1>
 </a>
 {% empty %}
 
-    <p>No hay superheroes disponibles.</p>
+    <p>{% trans "No superheroes available." %}</p>
 
 {% endfor %}
 

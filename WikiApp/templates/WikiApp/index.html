@@ -1,22 +1,23 @@
 {% extends 'WikiApp/base.html' %}
+{% load i18n %}
 {% block contenido %}
 <div id="content">
-    <h1>Menú Principal</h1>
-    <p>Elige una opción:</p>
+    <h1>{% trans "Main Menu" %}</h1>
+    <p>{% trans "Choose an option:" %}</p>
     
     <div class="menu-section">
-        <h3>Lista de Editoriales</h3>
-        <p><a href="{% url 'listaeditorial' %}">Ver Lista de Editoriales</a></p>
+        <h3>{% trans "Editorials" %}</h3>
+        <p><a href="{% url 'listaeditorial' %}">{% trans "View Editorials list" %}</a></p>
     </div>
     
     <div class="menu-section">
-        <h3>Lista de Grupos de SuperHeroes</h3>
-        <p><a href="{% url 'listagrupodesuperheroes' %}">Ver Lista de Grupos De SuperHeroes</a></p>
+        <h3>{% trans "SuperHero Groups" %}</h3>
+        <p><a href="{% url 'listagrupodesuperheroes' %}">{% trans "View Groups list" %}</a></p>
     </div>
     
     <div class="menu-section">
-        <h3>Lista de SuperHeroes</h3>
-        <p><a href="{% url 'listasuperheroes' %}">Ver Lista de SuperHeroes</a></p>
+        <h3>{% trans "SuperHeroes" %}</h3>
+        <p><a href="{% url 'listasuperheroes' %}">{% trans "View SuperHeroes list" %}</a></p>
     </div>
 </div>
 {% endblock %}

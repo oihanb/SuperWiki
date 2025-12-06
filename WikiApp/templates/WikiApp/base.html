@@ -1,4 +1,4 @@
-{% load static %}
+{% load static i18n %}
 <!DOCTYPE HTML>
 <html>
 
@@ -17,34 +17,46 @@
       <div id="logo">
         <div id="logo_text">
           <!-- class="logo_colour", allows you to change the colour of the text -->
-          <h1><a href="{% url 'index'%}">WikiApp<span class="logo_colour"> SuperHeroes</span></a></h1>
-          <h2>Informacion sobre Editoriales, Grupos de SuperHeroes y SuperHeroes</h2>
+          <h1><a href="{% url 'index'%}">{% trans "WikiApp" %}<span class="logo_colour"> {% trans "SuperHeroes" %}</span></a></h1>
+          <h2>{% trans "Information about Editorials, SuperHero Groups and SuperHeroes" %}</h2>
         </div>
       </div>
       <div id="menubar">
         <ul id="menu">
           <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-          <li><a href="{% url 'index'%}">Inicio</a></li>
-           <li><a href="{%url 'listaeditorial'%}">Editoriales</a></li>
-          <li><a href="{%url 'listagrupodesuperheroes'%}">Grupos de SuperHeroes</a></li>
-          <li><a href="{%url 'listasuperheroes'%}">SuperHeroes</a></li>
+          <li><a href="{% url 'index'%}">{% trans "Home" %}</a></li>
+           <li><a href="{%url 'listaeditorial'%}">{% trans "Editorials" %}</a></li>
+          <li><a href="{%url 'listagrupodesuperheroes'%}">{% trans "Groups" %}</a></li>
+          <li><a href="{%url 'listasuperheroes'%}">{% trans "SuperHeroes" %}</a></li>
         </ul>
+        <div style="float:right; margin-right:20px;">
+          <form action="/i18n/setlang/" method="post">
+            {% csrf_token %}
+            <label for="language_select">{% trans "Language" %}:</label>
+            <select name="language" id="language_select" onchange="this.form.submit()">
+              <option value="en" {% if request.LANGUAGE_CODE == 'en' %}selected{% endif %}>{% trans "English" %}</option>
+              <option value="es" {% if request.LANGUAGE_CODE == 'es' %}selected{% endif %}>{% trans "Spanish" %}</option>
+              <option value="eu" {% if request.LANGUAGE_CODE == 'eu' %}selected{% endif %}>{% trans "Basque" %}</option>
+            </select>
+            <input type="hidden" name="next" value="{{ request.path }}" />
+          </form>
+        </div>
       </div>
     </div>
     <div id="site_content">
       <div class="sidebar">
         <!-- insert your sidebar items here -->
-        <h3>Sobre Nosotros</h3>
-        <h4>¿De que va este proyecto?</h4>
-        <h5>Proyecto de Ingenieria Web 2025-2026</h5>
-        <p> Es un proyecto trabajado con HTML, Python y Django. El proyecto trata sobre una aplicación para podere buscar información sobre SuperHeroes.
+        <h3>{% trans "About Us" %}</h3>
+        <h4>{% trans "What is this project about?" %}</h4>
+        <h5>{% trans "Web Engineering Project 2025-2026" %}</h5>
+        <p>{% trans "It is a project developed with HTML, Python and Django. The project is about an application to search information about SuperHeroes." %}
           <br />
         <p></p>
-        <h4>¿Quienes somos?</h4>
-        <h5>Ingenieria Deusto</h5>
-        <p> Somos dos alumnos cursando la asignatura de Ingenieria Web de la Universidad de Deusto. 
+        <h4>{% trans "Who are we?" %}</h4>
+        <h5>{% trans "Deusto Engineering" %}</h5>
+        <p>{% trans "We are two students studying the Web Engineering course at the University of Deusto." %} 
           <br />
-        <h3>Autores</h3>
+        <h3>{% trans "Authors" %}</h3>
         <ul>
           <li>Gaizka Gredilla Yarritu</li>
           <li>Oihan Bilbao Perez</li>
@@ -57,7 +69,7 @@
     </div>
     <div id="content_footer"></div>
     <div id="footer">
-      Copyright &copy; colour_purple | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.html5webtemplates.co.uk">HTML5 Web Templates</a>
+      {% trans "Copyright" %} &copy; colour_purple | <a href="http://validator.w3.org/check?uri=referer">{% trans "HTML5" %}</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">{% trans "CSS" %}</a> | <a href="http://www.html5webtemplates.co.uk">{% trans "HTML5 Web Templates" %}</a>
     </div>
   </div>
   

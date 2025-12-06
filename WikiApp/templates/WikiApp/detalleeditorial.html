@@ -1,15 +1,16 @@
 {% extends 'WikiApp/base.html' %}
+{% load i18n %}
 {% block contenido %}
 <html>
 <head>
-    <title>Detalle de la Editorial</title>
+    <title>{% trans "Editorial Details" %}</title>
 </head>
 <body>
-    <h1>Detalle de la Editorial</h1>
-    <p>Nombre: {{ editorial.nombre }}</p>
-    <p>Año de Fundacion: {{ editorial.anoFundacion }}</p>
-    <p>Propietario: {{ editorial.propietario }}</p>
-    <h2>Grupos de SuperHeroes</h2>
+    <h1>{% trans "Editorial Details" %}</h1>
+    <p>{% trans "Name" %}: {{ editorial.nombre }}</p>
+    <p>{% trans "Year founded" %}: {{ editorial.anoFundacion }}</p>
+    <p>{% trans "Owner" %}: {{ editorial.propietario }}</p>
+    <h2>{% trans "SuperHero Groups" %}</h2>
     <ul>
     {% for grupo in editorial.editorialGrupo.all %} 
         <li>
@@ -18,7 +19,7 @@
             </a>
         </li>
     {% empty %}
-        <li>No hay grupos de superheroes asociados a esta editorial.</li>
+        <li>{% trans "No superhero groups associated to this editorial." %}</li>
     {% endfor %}
     </ul>
 </body>
