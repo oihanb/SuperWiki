@@ -22,6 +22,8 @@ urlpatterns = [
     #path('listaFutbolistas/', views.listaFutbolista,name='listaFutbolista'),
     path('listasuperheroes/', views.listaSuperHeroe.as_view(),name='listasuperheroes'),
     #DETALLE DE SUPERHEROES
-    #path('detalleFutbolista/<int:id_futbolista>/', views.detalleFutbolista,name='detalleFutbolista')
-    path('detallesuperheroes/<int:pk>/', views.detalleSuperHeroe.as_view(),name='detallesuperheroes')
+    #path('detalleFutbolista/<int:id_futbolista>/', views.detalleFutbolista,name='detalleFutbolista'),
+    path('detallesuperheroes/<int:pk>/', views.detalleSuperHeroe.as_view(),name='detallesuperheroes'),
+    # Contact page
+    path('contact/', views.contact_view, name='contact'),
 ]
