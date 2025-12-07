@@ -16,9 +16,7 @@ class GrupoDeSuperHeroes(models.Model):
     Editorial = models.ForeignKey(Editorial,related_name='editorialGrupo', on_delete= models.CASCADE)
     SuperHeroe = models.ManyToManyField('SuperHeroe', related_name="superheroeGrupo")
     
-    #class Meta:
-        #verbose_name="Grupo de Superheroes"
-        #verbose_name_plural= "Grupos de Superheroes"
+   
 
     def __str__(self):
         return self.nombre
@@ -29,9 +27,7 @@ class SuperHeroe(models.Model):
     Fnacimiento= models.PositiveIntegerField()
     imagenSuperHeroe = models.URLField(max_length=200, blank=True, null=True)
 
-   # class Meta: #Para visualizat el nombre en singular y plural del modelo en ADMIN
-       # verbose_name = "Superhéroe"
-       # verbose_name_plural = "Superhéroes"
+ 
 
     def __str__(self):
         return self.nombre

@@ -16,14 +16,12 @@
     <div id="header">
       <div id="logo">
         <div id="logo_text">
-          <!-- class="logo_colour", allows you to change the colour of the text -->
           <h1><a href="{% url 'index'%}">{% trans "WikiApp" %}<span class="logo_colour"> {% trans "SuperHeroes" %}</span></a></h1>
           <h2>{% trans "Information about Editorials, SuperHero Groups and SuperHeroes" %}</h2>
         </div>
       </div>
       <div id="menubar">
         <ul id="menu">
-          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
           <li><a href="{% url 'index'%}">{% trans "Home" %}</a></li>
 
           <li><a href="{%url 'listaeditorial'%}">{% trans "Editorials" %}</a></li>
@@ -48,7 +46,6 @@
     </div>
     <div id="site_content">
       <div class="sidebar">
-        <!-- insert your sidebar items here -->
         <h3>{% trans "About Us" %}</h3>
         <h4>{% trans "What is this project about?" %}</h4>
         <h5>{% trans "Web Engineering Project 2025-2026" %}</h5>
