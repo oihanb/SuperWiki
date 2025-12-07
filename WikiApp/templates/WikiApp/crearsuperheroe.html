@@ -1,0 +1,16 @@
+{% extends 'WikiApp/base.html' %}
+{% block contenido %}
+
+<h1>Registrar un Nuevo Superhéroe</h1>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %} 
+    
+    {{ form.as_p }} 
+    
+    <button type="submit">Guardar Superhéroe</button>
+</form>
+
+<p><a href="{% url 'listasuperheroes' %}">Cancelar y volver a la lista</a></p>
+
+{% endblock contenido %}

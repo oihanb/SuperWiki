@@ -29,6 +29,7 @@
           <li><a href="{% url 'listagrupodesuperheroes' %}">{% trans "Groups" %}</a></li>
           <li><a href="{% url 'listasuperheroes' %}">{% trans "SuperHeroes" %}</a></li>
           <li><a href="{% url 'contact' %}">{% trans "Contact" %}</a></li>
+          <li><a href="{%url 'crearsuperheroe'%}">{% trans "Crear Nuevo" %}</a></li>
         </ul>
         <div style="float:right; margin-right:20px;">
           <form action="/i18n/setlang/" method="post">
@@ -74,8 +75,6 @@
     </div>
   </div>
   
-  <script src="{% static 'style/js/BotonFactou.js' %}"></script>
-  <script src="{% static 'style/js/hora.js' %}"></script>
 
 </body>
 </html>

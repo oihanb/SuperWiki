@@ -1,7 +1,11 @@
 from django import forms
+from .models import SuperHeroe
 
-
-class ContactForm(forms.Form):
-    name = forms.CharField(label="Name", max_length=100, widget=forms.TextInput(attrs={'class':'form-control'}))
-    email = forms.EmailField(label="Email", widget=forms.EmailInput(attrs={'class':'form-control'}))
-    message = forms.CharField(label="Message", widget=forms.Textarea(attrs={'class':'form-control', 'rows':5}))
+class SuperHeroeForm(forms.ModelForm):
+    class Meta:
+        model = SuperHeroe
+        fields = ['nombre', 'poderes', 'Fnacimiento', 'imagenSuperHeroe']
+        labels = {
+            'nombre': 'Nombre del Superhéroe',
+            'Fnacimiento': 'Año de Nacimiento (Año)',
+        }
