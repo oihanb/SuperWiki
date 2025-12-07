@@ -2,84 +2,103 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SuperWiki\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-07 19:54+0100\n"
+"POT-Creation-Date: 2025-12-07 20:24+0100\n"
 "PO-Revision-Date: 2025-12-06 00:00+0000\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: .\SuperWiki\settings.py:134 .\WikiApp\templates\WikiApp\base.html:40
+#: .\SuperWiki\settings.py:134 .\WikiApp\templates\WikiApp\base.html:38
 msgid "English"
 msgstr "Inglés"
 
-#: .\SuperWiki\settings.py:135 .\WikiApp\templates\WikiApp\base.html:41
+#: .\SuperWiki\settings.py:135 .\WikiApp\templates\WikiApp\base.html:39
 msgid "Spanish"
 msgstr "Español"
 
 #: .\SuperWiki\settings.py:136
 msgid "Euskera"
-msgstr ""
+msgstr "Euskera"
 
-#: .\WikiApp\templates\WikiApp\base.html:20
+#: .\WikiApp\forms.py:10 .\WikiApp\templates\WikiApp\detalleeditorial.html:10
+#: .\WikiApp\templates\WikiApp\detallegrupodesuperheroes.html:10
+#: .\WikiApp\templates\WikiApp\detallegrupodesuperheroes.html:16
+#: .\WikiApp\templates\WikiApp\detallesuperheroe.html:11
+msgid "Name"
+msgstr "Nombre"
+
+#: .\WikiApp\forms.py:11
+#: .\WikiApp\templates\WikiApp\detallegrupodesuperheroes.html:17
+#: .\WikiApp\templates\WikiApp\detallesuperheroe.html:13
+msgid "Powers"
+msgstr "Poderes"
+
+#: .\WikiApp\forms.py:12
+msgid "Birth Year (Year)"
+msgstr "Año de Nacimiento (Año)"
+
+#: .\WikiApp\forms.py:13
+msgid "Superhero Image"
+msgstr "Imagen del Superhéroe"
+
+#: .\WikiApp\templates\WikiApp\base.html:19
 msgid "WikiApp"
 msgstr "WikiApp"
 
-#: .\WikiApp\templates\WikiApp\base.html:20
-#: .\WikiApp\templates\WikiApp\base.html:31
+#: .\WikiApp\templates\WikiApp\base.html:19
+#: .\WikiApp\templates\WikiApp\base.html:29
 #: .\WikiApp\templates\WikiApp\detallegrupodesuperheroes.html:12
-#: .\WikiApp\templates\WikiApp\examples.html:29
+#: .\WikiApp\templates\WikiApp\examples.html:27
 #: .\WikiApp\templates\WikiApp\index.html:19
 msgid "SuperHeroes"
 msgstr "SuperHeroes"
 
-#: .\WikiApp\templates\WikiApp\base.html:21
+#: .\WikiApp\templates\WikiApp\base.html:20
 msgid "Information about Editorials, SuperHero Groups and SuperHeroes"
 msgstr "Información sobre Editoriales, Grupos de SuperHeroes y SuperHeroes"
 
-#: .\WikiApp\templates\WikiApp\base.html:27
-#: .\WikiApp\templates\WikiApp\examples.html:26
+#: .\WikiApp\templates\WikiApp\base.html:25
+#: .\WikiApp\templates\WikiApp\examples.html:24
 msgid "Home"
 msgstr "Inicio"
 
-#: .\WikiApp\templates\WikiApp\base.html:29
-#: .\WikiApp\templates\WikiApp\examples.html:27
+#: .\WikiApp\templates\WikiApp\base.html:27
+#: .\WikiApp\templates\WikiApp\examples.html:25
 #: .\WikiApp\templates\WikiApp\index.html:9
 msgid "Editorials"
 msgstr "Editoriales"
 
-#: .\WikiApp\templates\WikiApp\base.html:30
-#: .\WikiApp\templates\WikiApp\examples.html:28
+#: .\WikiApp\templates\WikiApp\base.html:28
+#: .\WikiApp\templates\WikiApp\examples.html:26
 msgid "Groups"
 msgstr "Grupos"
 
-#: .\WikiApp\templates\WikiApp\base.html:32
-#, fuzzy
-#| msgid "Latest News"
+#: .\WikiApp\templates\WikiApp\base.html:30
 msgid "Create New"
-msgstr "Últimas Noticias"
+msgstr "Crear Nuevo"
 
-#: .\WikiApp\templates\WikiApp\base.html:38
+#: .\WikiApp\templates\WikiApp\base.html:36
 msgid "Language"
 msgstr "Idioma"
 
-#: .\WikiApp\templates\WikiApp\base.html:42
+#: .\WikiApp\templates\WikiApp\base.html:40
 msgid "Basque"
 msgstr "Euskera"
 
-#: .\WikiApp\templates\WikiApp\base.html:52
+#: .\WikiApp\templates\WikiApp\base.html:49
 msgid "About Us"
 msgstr "Sobre Nosotros"
 
-#: .\WikiApp\templates\WikiApp\base.html:53
+#: .\WikiApp\templates\WikiApp\base.html:50
 msgid "What is this project about?"
 msgstr "¿De qué va este proyecto?"
 
-#: .\WikiApp\templates\WikiApp\base.html:54
+#: .\WikiApp\templates\WikiApp\base.html:51
 msgid "Web Engineering Project 2025-2026"
 msgstr "Proyecto de Ingeniería Web 2025-2026"
 
-#: .\WikiApp\templates\WikiApp\base.html:55
+#: .\WikiApp\templates\WikiApp\base.html:52
 msgid ""
 "It is a project developed with HTML, Python and Django. The project is about "
 "an application to search information about SuperHeroes."
@@ -87,15 +106,15 @@ msgstr ""
 "Es un proyecto desarrollado con HTML, Python y Django. El proyecto trata "
 "sobre una aplicación para buscar información sobre SuperHeroes."
 
-#: .\WikiApp\templates\WikiApp\base.html:58
+#: .\WikiApp\templates\WikiApp\base.html:55
 msgid "Who are we?"
 msgstr "¿Quiénes somos?"
 
-#: .\WikiApp\templates\WikiApp\base.html:59
+#: .\WikiApp\templates\WikiApp\base.html:56
 msgid "Deusto Engineering"
 msgstr "Ingeniería Deusto"
 
-#: .\WikiApp\templates\WikiApp\base.html:60
+#: .\WikiApp\templates\WikiApp\base.html:57
 msgid ""
 "We are two students studying the Web Engineering course at the University of "
 "Deusto."
@@ -103,37 +122,42 @@ msgstr ""
 "Somos dos alumnos estudiando el curso de Ingeniería Web en la Universidad de "
 "Deusto."
 
-#: .\WikiApp\templates\WikiApp\base.html:62
+#: .\WikiApp\templates\WikiApp\base.html:59
 msgid "Authors"
 msgstr "Autores"
 
-#: .\WikiApp\templates\WikiApp\base.html:75
+#: .\WikiApp\templates\WikiApp\base.html:72
 msgid "Copyright"
 msgstr "Derechos de Autor"
 
-#: .\WikiApp\templates\WikiApp\base.html:75
+#: .\WikiApp\templates\WikiApp\base.html:72
 msgid "HTML5"
 msgstr "HTML5"
 
-#: .\WikiApp\templates\WikiApp\base.html:75
+#: .\WikiApp\templates\WikiApp\base.html:72
 msgid "CSS"
 msgstr "CSS"
 
-#: .\WikiApp\templates\WikiApp\base.html:75
+#: .\WikiApp\templates\WikiApp\base.html:72
 msgid "HTML5 Web Templates"
 msgstr "Plantillas Web HTML5"
+
+#: .\WikiApp\templates\WikiApp\crearsuperheroe.html:5
+msgid "Register a New Superhero"
+msgstr "Registrar un Nuevo Superhéroe"
+
+#: .\WikiApp\templates\WikiApp\crearsuperheroe.html:12
+msgid "Save Superhero"
+msgstr "Guardar Superhéroe"
+
+#: .\WikiApp\templates\WikiApp\crearsuperheroe.html:15
+msgid "Cancel and return to the list"
+msgstr "Cancelar y volver a la lista"
 
 #: .\WikiApp\templates\WikiApp\detalleeditorial.html:6
 #: .\WikiApp\templates\WikiApp\detalleeditorial.html:9
 msgid "Editorial Details"
 msgstr "Detalles de la Editorial"
-
-#: .\WikiApp\templates\WikiApp\detalleeditorial.html:10
-#: .\WikiApp\templates\WikiApp\detallegrupodesuperheroes.html:10
-#: .\WikiApp\templates\WikiApp\detallegrupodesuperheroes.html:16
-#: .\WikiApp\templates\WikiApp\detallesuperheroe.html:11
-msgid "Name"
-msgstr "Nombre"
 
 #: .\WikiApp\templates\WikiApp\detalleeditorial.html:11
 msgid "Year founded"
@@ -165,11 +189,6 @@ msgstr "Editorial"
 #: .\WikiApp\templates\WikiApp\detallesuperheroe.html:15
 msgid "Image"
 msgstr "Imagen"
-
-#: .\WikiApp\templates\WikiApp\detallegrupodesuperheroes.html:17
-#: .\WikiApp\templates\WikiApp\detallesuperheroe.html:13
-msgid "Powers"
-msgstr "Poderes"
 
 #: .\WikiApp\templates\WikiApp\detallegrupodesuperheroes.html:21
 #: .\WikiApp\templates\WikiApp\detallesuperheroe.html:16
@@ -213,26 +232,26 @@ msgstr "descripción del sitio web"
 msgid "website keywords, website keywords"
 msgstr "palabras clave del sitio web, palabras clave del sitio web"
 
-#: .\WikiApp\templates\WikiApp\examples.html:20
+#: .\WikiApp\templates\WikiApp\examples.html:19
 msgid "Simple. Contemporary. Website Template."
 msgstr "Plantilla Web Simple. Contemporánea."
 
-#: .\WikiApp\templates\WikiApp\examples.html:37
+#: .\WikiApp\templates\WikiApp\examples.html:34
 msgid "Latest News"
 msgstr "Últimas Noticias"
 
-#: .\WikiApp\templates\WikiApp\examples.html:38
-#: .\WikiApp\templates\WikiApp\examples.html:42
+#: .\WikiApp\templates\WikiApp\examples.html:35
+#: .\WikiApp\templates\WikiApp\examples.html:39
 msgid "New Website Launched"
 msgstr "Nuevo Sitio Web Lanzado"
 
-#: .\WikiApp\templates\WikiApp\examples.html:39
-#: .\WikiApp\templates\WikiApp\examples.html:43
+#: .\WikiApp\templates\WikiApp\examples.html:36
+#: .\WikiApp\templates\WikiApp\examples.html:40
 msgid "January 1st, 2010"
 msgstr "1 de enero de 2010"
 
-#: .\WikiApp\templates\WikiApp\examples.html:40
-#: .\WikiApp\templates\WikiApp\examples.html:44
+#: .\WikiApp\templates\WikiApp\examples.html:37
+#: .\WikiApp\templates\WikiApp\examples.html:41
 msgid ""
 "2010 sees the redesign of our website. Take a look around and let us know "
 "what you think."
@@ -240,37 +259,37 @@ msgstr ""
 "2010 ve el rediseño de nuestro sitio web. Echa un vistazo y cuéntanos qué te "
 "parece."
 
-#: .\WikiApp\templates\WikiApp\examples.html:40
-#: .\WikiApp\templates\WikiApp\examples.html:44
+#: .\WikiApp\templates\WikiApp\examples.html:37
+#: .\WikiApp\templates\WikiApp\examples.html:41
 msgid "Read more"
 msgstr "Leer más"
 
-#: .\WikiApp\templates\WikiApp\examples.html:45
+#: .\WikiApp\templates\WikiApp\examples.html:42
 msgid "Useful Links"
 msgstr "Enlaces Útiles"
 
-#: .\WikiApp\templates\WikiApp\examples.html:47
+#: .\WikiApp\templates\WikiApp\examples.html:44
 msgid "link 1"
 msgstr "enlace 1"
 
-#: .\WikiApp\templates\WikiApp\examples.html:48
+#: .\WikiApp\templates\WikiApp\examples.html:45
 msgid "link 2"
 msgstr "enlace 2"
 
-#: .\WikiApp\templates\WikiApp\examples.html:49
+#: .\WikiApp\templates\WikiApp\examples.html:46
 msgid "link 3"
 msgstr "enlace 3"
 
-#: .\WikiApp\templates\WikiApp\examples.html:50
+#: .\WikiApp\templates\WikiApp\examples.html:47
 msgid "link 4"
 msgstr "enlace 4"
 
-#: .\WikiApp\templates\WikiApp\examples.html:52
-#: .\WikiApp\templates\WikiApp\examples.html:56
+#: .\WikiApp\templates\WikiApp\examples.html:49
+#: .\WikiApp\templates\WikiApp\examples.html:53
 msgid "Search"
 msgstr "Buscar"
 
-#: .\WikiApp\templates\WikiApp\examples.html:55
+#: .\WikiApp\templates\WikiApp\examples.html:52
 msgid "Enter keywords....."
 msgstr "Introduce palabras clave....."
 
@@ -301,18 +320,6 @@ msgstr "Listado de Editoriales"
 #: .\WikiApp\templates\WikiApp\listaeditorial.html:17
 msgid "No editorials available."
 msgstr "No hay editoriales disponibles."
-
-#: templates/WikiApp/crearsuperheroe.html:6
-msgid "Register a New Superhero"
-msgstr "Registrar un Nuevo Superhéroe"
-
-#: templates/WikiApp/crearsuperheroe.html:12
-msgid "Save Superhero"
-msgstr "Guardar Superhéroe"
-
-#: templates/WikiApp/crearsuperheroe.html:15
-msgid "Cancel and return to the list"
-msgstr "Cancelar y volver a la lista"
 
 #: .\WikiApp\templates\WikiApp\listagrupodesuperheroes.html:14
 msgid "No groups available."
