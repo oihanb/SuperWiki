@@ -49,5 +49,5 @@ class listaSuperHeroe(ListView):
 
 class SuperHeroeCreateView(CreateView):
     form_class = SuperHeroeForm 
-    template_name = 'crearsuperheroe.html' 
+    template_name = 'WikiApp/crearsuperheroe.html' 
     success_url = reverse_lazy('listasuperheroes')
