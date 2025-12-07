@@ -126,28 +126,49 @@ ol li
 { width: 900px;
   height: 72px;
   padding: 0;
-  background: #1293EE;} 
+  background: #1293EE;
+  display: flex;
+  justify-content: center;
+} 
 
-ul#menu, ul#menu li
-{ float: left;
+ul#menu
+{ 
+  display: flex; 
+  width: 100%;            /* La lista ocupa toda la barra */
+  justify-content: space-around; 
   margin: 0; 
-  padding: 0;}
-
+  padding: 0;
+  list-style: none;
+}
 ul#menu li
-{ list-style: none;}
+{ 
+  /* NUEVO: Quitar float y dejar que Flexbox maneje la posición */
+  float: none;
+  flex-grow: 1;           /* Hace que todos los botones intenten ocupar el mismo ancho */
+  text-align: center;
+}
 
 ul#menu li a
-{ letter-spacing: 0.1em;
-  font: normal 100% arial, sans-serif;
+{ 
+  letter-spacing: 0.1em;
+  font: normal 90% arial, sans-serif; /* Reducimos un poco la letra para asegurar */
   display: block; 
-  float: left; 
+  float: none;            /* Quitamos el float */
   height: 37px;
-  padding: 29px 26px 6px 26px;
+  
+  /* NUEVO: Padding lateral muy reducido (5px) para que quepa el texto largo */
+  padding: 29px 5px 6px 5px; 
+  
   text-align: center;
   color: #FFF;
   text-transform: uppercase;
   text-decoration: none;
-  background: transparent;} 
+  background: transparent;
+  
+  /* NUEVO: Evita que el texto se parta en dos líneas si es muy largo */
+  white-space: nowrap; 
+  width: 100%; /* Asegura que el enlace llene el botón */
+}
 
 ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
 { color: #FFF;
