@@ -15,14 +15,12 @@
     <div id="header">
       <div id="logo">
         <div id="logo_text">
-          <!-- class="logo_colour", allows you to change the colour of the text -->
           <h1><a href="index.html">colour<span class="logo_colour">purple</span></a></h1>
           <h2>{% trans "Simple. Contemporary. Website Template." %}</h2>
         </div>
       </div>
       <div id="menubar">
         <ul id="menu">
-          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
           <li><a href="{% url 'index'%}">{% trans "Home" %}</a></li>
           <li class="selected"><a href="examples.html">{% trans "Editorials" %}</a></li>
           <li><a href="{% url 'index' %}">{% trans "Groups" %}</a></li>
@@ -33,7 +31,6 @@
     <div id="content_header"></div>
     <div id="site_content">
       <div class="sidebar">
-        <!-- insert your sidebar items here -->
         <h3>{% trans "Latest News" %}</h3>
         <h4>{% trans "New Website Launched" %}</h4>
         <h5>{% trans "January 1st, 2010" %}</h5>
@@ -58,7 +55,6 @@
         </form>
       </div>
       <div id="content">
-        <!-- insert the page content here -->
         {% extends contenido%}{%endblock%}
       </div>
     </div>

@@ -27,8 +27,8 @@ class GrupoDeSuperHeroesAdmin(admin.ModelAdmin):
         ('Miembros del Grupo',{'fields':['SuperHeroe']}),
     ]
     list_display=('nombre','Editorial')
-    #list_filter = ['Editorial']
-    #search_fields = ['nombre']
+    list_filter = ['Editorial']
+    search_fields = ['nombre']
     filter_horizontal = ('SuperHeroe',)
 admin.site.register(GrupoDeSuperHeroes, GrupoDeSuperHeroesAdmin)
 
@@ -39,7 +39,7 @@ class SuperheroeAdmin(admin.ModelAdmin):
         ('Imagen',{'fields':['imagenSuperHeroe']})
     ]
     list_display=('nombre','Fnacimiento','poderes')
-    #search_fields = ['nombre', 'poderes']
+    search_fields = ['nombre', 'poderes']
 admin.site.register(SuperHeroe, SuperheroeAdmin)
 
 
