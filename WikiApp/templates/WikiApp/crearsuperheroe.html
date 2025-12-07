@@ -1,16 +1,17 @@
 {% extends 'WikiApp/base.html' %}
+{% load i18n %}
 {% block contenido %}
 
-<h1>Registrar un Nuevo Superhéroe</h1>
+<h1>{% trans "Register a New Superhero" %}</h1>
 
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %} 
     
     {{ form.as_p }} 
     
-    <button type="submit">Guardar Superhéroe</button>
+    <button type="submit">{% trans "Save Superhero" %}</button>
 </form>
 
-<p><a href="{% url 'listasuperheroes' %}">Cancelar y volver a la lista</a></p>
+<p><a href="{% url 'listasuperheroes' %}">{% trans "Cancel and return to the list" %}</a></p>
 
 {% endblock contenido %}

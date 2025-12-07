@@ -1,235 +1,360 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SuperWiki\n"
-"POT-Creation-Date: 2025-12-06 00:00+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-07 19:54+0100\n"
 "PO-Revision-Date: 2025-12-06 00:00+0000\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "Main Menu"
-msgstr "Menú Principal"
-
-msgid "Choose an option:"
-msgstr "Elige una opción:"
-
-msgid "Editorials"
-msgstr "Editoriales"
-
-msgid "View Editorials list"
-msgstr "Ver Lista de Editoriales"
-
-msgid "SuperHero Groups"
-msgstr "Grupos de SuperHeroes"
-
-msgid "View Groups list"
-msgstr "Ver Lista de Grupos De SuperHeroes"
-
-msgid "SuperHeroes"
-msgstr "SuperHeroes"
-
-msgid "View SuperHeroes list"
-msgstr "Ver Lista de SuperHeroes"
-
-msgid "Home"
-msgstr "Inicio"
-
-msgid "Language"
-msgstr "Idioma"
-
-msgid "Information about Editorials, SuperHero Groups and SuperHeroes"
-msgstr "Información sobre Editoriales, Grupos de SuperHeroes y SuperHeroes"
-
-msgid "About Us"
-msgstr "Sobre Nosotros"
-
-msgid "What is this project about?"
-msgstr "¿De qué va este proyecto?"
-
-msgid "Web Engineering Project 2025-2026"
-msgstr "Proyecto de Ingeniería Web 2025-2026"
-
-msgid "This project is developed with HTML, Python and Django. The project allows searching information about SuperHeroes."
-msgstr "Este proyecto está desarrollado con HTML, Python y Django. El proyecto permite buscar información sobre SuperHeroes."
-
-msgid "Read more"
-msgstr "Leer más"
-
-msgid "Who are we?"
-msgstr "¿Quiénes somos?"
-
-msgid "Authors"
-msgstr "Autores"
-
-msgid "Search"
-msgstr "Buscar"
-
-msgid "Enter keywords....."
-msgstr "Introduce palabras clave....."
-
-msgid "List of Editorials"
-msgstr "Listado de Editoriales"
-
-msgid "No editorials available."
-msgstr "No hay editoriales disponibles."
-
-msgid "Editorial Details"
-msgstr "Detalles de la Editorial"
-
-msgid "Name"
-msgstr "Nombre"
-
-msgid "Year founded"
-msgstr "Año de fundación"
-
-msgid "Owner"
-msgstr "Propietario"
-
-msgid "No superhero groups associated to this editorial."
-msgstr "No hay grupos de superhéroes asociados a esta editorial."
-
-msgid "No superheroes available."
-msgstr "No hay superhéroes disponibles."
-
-msgid "No groups available."
-msgstr "No hay grupos disponibles."
-
-msgid "Group Details"
-msgstr "Detalles del Grupo"
-
-msgid "Editorial"
-msgstr "Editorial"
-
-msgid "Image"
-msgstr "Imagen"
-
-msgid "Powers"
-msgstr "Poderes"
-
-msgid "image"
-msgstr "imagen"
-
-msgid "no image"
-msgstr "sin imagen"
-
-msgid "No superheroes associated to this Editorial"
-msgstr "No hay superhéroes asociados a esta Editorial"
-
-msgid "SuperHero Details"
-msgstr "Detalles del SuperHéroe"
-
-msgid "ID"
-msgstr "ID"
-
-msgid "Date of birth"
-msgstr "Fecha de nacimiento"
-
-msgid "No image available for this SuperHero"
-msgstr "No hay imagen disponible para este SuperHéroe"
-
-msgid "WikiApp SuperHeroes"
-msgstr "WikiApp SuperHeroes"
-
-msgid "website description"
-msgstr "descripción del sitio web"
-
-msgid "website keywords, website keywords"
-msgstr "palabras clave del sitio web, palabras clave del sitio web"
-
-msgid "Groups"
-msgstr "Grupos"
-
-msgid "colour_purple - contact us"
-msgstr "colour_purple - contáctanos"
-
-msgid "Simple. Contemporary. Website Template."
-msgstr "Plantilla Web Simple. Contemporánea."
-
-msgid "Contact Us"
-msgstr "Contáctanos"
-
-msgid "Contact us"
-msgstr "Contáctanos"
-
-msgid "Email"
-msgstr "Correo Electrónico"
-
-msgid "Message"
-msgstr "Mensaje"
-
-msgid "Submit"
-msgstr "Enviar"
-
-msgid "colour_purple - examples"
-msgstr "colour_purple - ejemplos"
-
-msgid "Examples"
-msgstr "Ejemplos"
-
-msgid "Latest News"
-msgstr "Últimas Noticias"
-
-msgid "New Website Launched"
-msgstr "Nuevo Sitio Web Lanzado"
-
-msgid "January 1st, 2010"
-msgstr "1 de enero de 2010"
-
-msgid "2010 sees the redesign of our website. Take a look around and let us know what you think."
-msgstr "2010 ve el rediseño de nuestro sitio web. Echa un vistazo y cuéntanos qué te parece."
-
-msgid "Useful Links"
-msgstr "Enlaces Útiles"
-
-msgid "link 1"
-msgstr "enlace 1"
-
-msgid "link 2"
-msgstr "enlace 2"
-
-msgid "link 3"
-msgstr "enlace 3"
-
-msgid "link 4"
-msgstr "enlace 4"
-
-msgid "A Page"
-msgstr "Una Página"
-
-msgid "Another Page"
-msgstr "Otra Página"
-
-msgid "Copyright"
-msgstr "Derechos de Autor"
-
-msgid "HTML5"
-msgstr "HTML5"
-
-msgid "CSS"
-msgstr "CSS"
-
-msgid "HTML5 Web Templates"
-msgstr "Plantillas Web HTML5"
-
-msgid "WikiApp"
-msgstr "WikiApp"
-
+#: .\SuperWiki\settings.py:134 .\WikiApp\templates\WikiApp\base.html:40
 msgid "English"
 msgstr "Inglés"
 
+#: .\SuperWiki\settings.py:135 .\WikiApp\templates\WikiApp\base.html:41
 msgid "Spanish"
 msgstr "Español"
 
+#: .\SuperWiki\settings.py:136
+msgid "Euskera"
+msgstr ""
+
+#: .\WikiApp\templates\WikiApp\base.html:20
+msgid "WikiApp"
+msgstr "WikiApp"
+
+#: .\WikiApp\templates\WikiApp\base.html:20
+#: .\WikiApp\templates\WikiApp\base.html:31
+#: .\WikiApp\templates\WikiApp\detallegrupodesuperheroes.html:12
+#: .\WikiApp\templates\WikiApp\examples.html:29
+#: .\WikiApp\templates\WikiApp\index.html:19
+msgid "SuperHeroes"
+msgstr "SuperHeroes"
+
+#: .\WikiApp\templates\WikiApp\base.html:21
+msgid "Information about Editorials, SuperHero Groups and SuperHeroes"
+msgstr "Información sobre Editoriales, Grupos de SuperHeroes y SuperHeroes"
+
+#: .\WikiApp\templates\WikiApp\base.html:27
+#: .\WikiApp\templates\WikiApp\examples.html:26
+msgid "Home"
+msgstr "Inicio"
+
+#: .\WikiApp\templates\WikiApp\base.html:29
+#: .\WikiApp\templates\WikiApp\examples.html:27
+#: .\WikiApp\templates\WikiApp\index.html:9
+msgid "Editorials"
+msgstr "Editoriales"
+
+#: .\WikiApp\templates\WikiApp\base.html:30
+#: .\WikiApp\templates\WikiApp\examples.html:28
+msgid "Groups"
+msgstr "Grupos"
+
+#: .\WikiApp\templates\WikiApp\base.html:32
+#, fuzzy
+#| msgid "Latest News"
+msgid "Create New"
+msgstr "Últimas Noticias"
+
+#: .\WikiApp\templates\WikiApp\base.html:38
+msgid "Language"
+msgstr "Idioma"
+
+#: .\WikiApp\templates\WikiApp\base.html:42
 msgid "Basque"
 msgstr "Euskera"
 
-msgid "It is a project developed with HTML, Python and Django. The project is about an application to search information about SuperHeroes."
-msgstr "Es un proyecto desarrollado con HTML, Python y Django. El proyecto trata sobre una aplicación para buscar información sobre SuperHeroes."
+#: .\WikiApp\templates\WikiApp\base.html:52
+msgid "About Us"
+msgstr "Sobre Nosotros"
 
+#: .\WikiApp\templates\WikiApp\base.html:53
+msgid "What is this project about?"
+msgstr "¿De qué va este proyecto?"
+
+#: .\WikiApp\templates\WikiApp\base.html:54
+msgid "Web Engineering Project 2025-2026"
+msgstr "Proyecto de Ingeniería Web 2025-2026"
+
+#: .\WikiApp\templates\WikiApp\base.html:55
+msgid ""
+"It is a project developed with HTML, Python and Django. The project is about "
+"an application to search information about SuperHeroes."
+msgstr ""
+"Es un proyecto desarrollado con HTML, Python y Django. El proyecto trata "
+"sobre una aplicación para buscar información sobre SuperHeroes."
+
+#: .\WikiApp\templates\WikiApp\base.html:58
+msgid "Who are we?"
+msgstr "¿Quiénes somos?"
+
+#: .\WikiApp\templates\WikiApp\base.html:59
 msgid "Deusto Engineering"
 msgstr "Ingeniería Deusto"
 
-msgid "We are two students studying the Web Engineering course at the University of Deusto."
-msgstr "Somos dos alumnos estudiando el curso de Ingeniería Web en la Universidad de Deusto."
+#: .\WikiApp\templates\WikiApp\base.html:60
+msgid ""
+"We are two students studying the Web Engineering course at the University of "
+"Deusto."
+msgstr ""
+"Somos dos alumnos estudiando el curso de Ingeniería Web en la Universidad de "
+"Deusto."
 
+#: .\WikiApp\templates\WikiApp\base.html:62
+msgid "Authors"
+msgstr "Autores"
+
+#: .\WikiApp\templates\WikiApp\base.html:75
+msgid "Copyright"
+msgstr "Derechos de Autor"
+
+#: .\WikiApp\templates\WikiApp\base.html:75
+msgid "HTML5"
+msgstr "HTML5"
+
+#: .\WikiApp\templates\WikiApp\base.html:75
+msgid "CSS"
+msgstr "CSS"
+
+#: .\WikiApp\templates\WikiApp\base.html:75
+msgid "HTML5 Web Templates"
+msgstr "Plantillas Web HTML5"
+
+#: .\WikiApp\templates\WikiApp\detalleeditorial.html:6
+#: .\WikiApp\templates\WikiApp\detalleeditorial.html:9
+msgid "Editorial Details"
+msgstr "Detalles de la Editorial"
+
+#: .\WikiApp\templates\WikiApp\detalleeditorial.html:10
+#: .\WikiApp\templates\WikiApp\detallegrupodesuperheroes.html:10
+#: .\WikiApp\templates\WikiApp\detallegrupodesuperheroes.html:16
+#: .\WikiApp\templates\WikiApp\detallesuperheroe.html:11
+msgid "Name"
+msgstr "Nombre"
+
+#: .\WikiApp\templates\WikiApp\detalleeditorial.html:11
+msgid "Year founded"
+msgstr "Año de fundación"
+
+#: .\WikiApp\templates\WikiApp\detalleeditorial.html:12
+msgid "Owner"
+msgstr "Propietario"
+
+#: .\WikiApp\templates\WikiApp\detalleeditorial.html:13
+#: .\WikiApp\templates\WikiApp\index.html:14
+msgid "SuperHero Groups"
+msgstr "Grupos de SuperHeroes"
+
+#: .\WikiApp\templates\WikiApp\detalleeditorial.html:22
+msgid "No superhero groups associated to this editorial."
+msgstr "No hay grupos de superhéroes asociados a esta editorial."
+
+#: .\WikiApp\templates\WikiApp\detallegrupodesuperheroes.html:6
+#: .\WikiApp\templates\WikiApp\detallegrupodesuperheroes.html:9
+msgid "Group Details"
+msgstr "Detalles del Grupo"
+
+#: .\WikiApp\templates\WikiApp\detallegrupodesuperheroes.html:11
+msgid "Editorial"
+msgstr "Editorial"
+
+#: .\WikiApp\templates\WikiApp\detallegrupodesuperheroes.html:15
+#: .\WikiApp\templates\WikiApp\detallesuperheroe.html:15
+msgid "Image"
+msgstr "Imagen"
+
+#: .\WikiApp\templates\WikiApp\detallegrupodesuperheroes.html:17
+#: .\WikiApp\templates\WikiApp\detallesuperheroe.html:13
+msgid "Powers"
+msgstr "Poderes"
+
+#: .\WikiApp\templates\WikiApp\detallegrupodesuperheroes.html:21
+#: .\WikiApp\templates\WikiApp\detallesuperheroe.html:16
+msgid "image"
+msgstr "imagen"
+
+#: .\WikiApp\templates\WikiApp\detallegrupodesuperheroes.html:23
+msgid "no image"
+msgstr "sin imagen"
+
+#: .\WikiApp\templates\WikiApp\detallegrupodesuperheroes.html:38
+msgid "No superheroes associated to this Editorial"
+msgstr "No hay superhéroes asociados a esta Editorial"
+
+#: .\WikiApp\templates\WikiApp\detallesuperheroe.html:6
+#: .\WikiApp\templates\WikiApp\detallesuperheroe.html:9
+msgid "SuperHero Details"
+msgstr "Detalles del SuperHéroe"
+
+#: .\WikiApp\templates\WikiApp\detallesuperheroe.html:10
+msgid "ID"
+msgstr "ID"
+
+#: .\WikiApp\templates\WikiApp\detallesuperheroe.html:12
+msgid "Date of birth"
+msgstr "Fecha de nacimiento"
+
+#: .\WikiApp\templates\WikiApp\detallesuperheroe.html:18
+msgid "No image available for this SuperHero"
+msgstr "No hay imagen disponible para este SuperHéroe"
+
+#: .\WikiApp\templates\WikiApp\examples.html:6
+msgid "colour_purple - examples"
+msgstr "colour_purple - ejemplos"
+
+#: .\WikiApp\templates\WikiApp\examples.html:7
+msgid "website description"
+msgstr "descripción del sitio web"
+
+#: .\WikiApp\templates\WikiApp\examples.html:8
+msgid "website keywords, website keywords"
+msgstr "palabras clave del sitio web, palabras clave del sitio web"
+
+#: .\WikiApp\templates\WikiApp\examples.html:20
+msgid "Simple. Contemporary. Website Template."
+msgstr "Plantilla Web Simple. Contemporánea."
+
+#: .\WikiApp\templates\WikiApp\examples.html:37
+msgid "Latest News"
+msgstr "Últimas Noticias"
+
+#: .\WikiApp\templates\WikiApp\examples.html:38
+#: .\WikiApp\templates\WikiApp\examples.html:42
+msgid "New Website Launched"
+msgstr "Nuevo Sitio Web Lanzado"
+
+#: .\WikiApp\templates\WikiApp\examples.html:39
+#: .\WikiApp\templates\WikiApp\examples.html:43
+msgid "January 1st, 2010"
+msgstr "1 de enero de 2010"
+
+#: .\WikiApp\templates\WikiApp\examples.html:40
+#: .\WikiApp\templates\WikiApp\examples.html:44
+msgid ""
+"2010 sees the redesign of our website. Take a look around and let us know "
+"what you think."
+msgstr ""
+"2010 ve el rediseño de nuestro sitio web. Echa un vistazo y cuéntanos qué te "
+"parece."
+
+#: .\WikiApp\templates\WikiApp\examples.html:40
+#: .\WikiApp\templates\WikiApp\examples.html:44
+msgid "Read more"
+msgstr "Leer más"
+
+#: .\WikiApp\templates\WikiApp\examples.html:45
+msgid "Useful Links"
+msgstr "Enlaces Útiles"
+
+#: .\WikiApp\templates\WikiApp\examples.html:47
+msgid "link 1"
+msgstr "enlace 1"
+
+#: .\WikiApp\templates\WikiApp\examples.html:48
+msgid "link 2"
+msgstr "enlace 2"
+
+#: .\WikiApp\templates\WikiApp\examples.html:49
+msgid "link 3"
+msgstr "enlace 3"
+
+#: .\WikiApp\templates\WikiApp\examples.html:50
+msgid "link 4"
+msgstr "enlace 4"
+
+#: .\WikiApp\templates\WikiApp\examples.html:52
+#: .\WikiApp\templates\WikiApp\examples.html:56
+msgid "Search"
+msgstr "Buscar"
+
+#: .\WikiApp\templates\WikiApp\examples.html:55
+msgid "Enter keywords....."
+msgstr "Introduce palabras clave....."
+
+#: .\WikiApp\templates\WikiApp\index.html:5
+msgid "Main Menu"
+msgstr "Menú Principal"
+
+#: .\WikiApp\templates\WikiApp\index.html:6
+msgid "Choose an option:"
+msgstr "Elige una opción:"
+
+#: .\WikiApp\templates\WikiApp\index.html:10
+msgid "View Editorials list"
+msgstr "Ver Lista de Editoriales"
+
+#: .\WikiApp\templates\WikiApp\index.html:15
+msgid "View Groups list"
+msgstr "Ver Lista de Grupos De SuperHeroes"
+
+#: .\WikiApp\templates\WikiApp\index.html:20
+msgid "View SuperHeroes list"
+msgstr "Ver Lista de SuperHeroes"
+
+#: .\WikiApp\templates\WikiApp\listaeditorial.html:5
+msgid "List of Editorials"
+msgstr "Listado de Editoriales"
+
+#: .\WikiApp\templates\WikiApp\listaeditorial.html:17
+msgid "No editorials available."
+msgstr "No hay editoriales disponibles."
+
+#: templates/WikiApp/crearsuperheroe.html:6
+msgid "Register a New Superhero"
+msgstr "Registrar un Nuevo Superhéroe"
+
+#: templates/WikiApp/crearsuperheroe.html:12
+msgid "Save Superhero"
+msgstr "Guardar Superhéroe"
+
+#: templates/WikiApp/crearsuperheroe.html:15
+msgid "Cancel and return to the list"
+msgstr "Cancelar y volver a la lista"
+
+#: .\WikiApp\templates\WikiApp\listagrupodesuperheroes.html:14
+msgid "No groups available."
+msgstr "No hay grupos disponibles."
+
+#: .\WikiApp\templates\WikiApp\listasuperheroes.html:13
+msgid "No superheroes available."
+msgstr "No hay superhéroes disponibles."
+
+#~ msgid ""
+#~ "This project is developed with HTML, Python and Django. The project "
+#~ "allows searching information about SuperHeroes."
+#~ msgstr ""
+#~ "Este proyecto está desarrollado con HTML, Python y Django. El proyecto "
+#~ "permite buscar información sobre SuperHeroes."
+
+#~ msgid "WikiApp SuperHeroes"
+#~ msgstr "WikiApp SuperHeroes"
+
+#~ msgid "colour_purple - contact us"
+#~ msgstr "colour_purple - contáctanos"
+
+#~ msgid "Contact Us"
+#~ msgstr "Contáctanos"
+
+#~ msgid "Contact us"
+#~ msgstr "Contáctanos"
+
+#~ msgid "Email"
+#~ msgstr "Correo Electrónico"
+
+#~ msgid "Message"
+#~ msgstr "Mensaje"
+
+#~ msgid "Submit"
+#~ msgstr "Enviar"
+
+#~ msgid "Examples"
+#~ msgstr "Ejemplos"
+
+#~ msgid "A Page"
+#~ msgstr "Una Página"
+
+#~ msgid "Another Page"
+#~ msgstr "Otra Página"

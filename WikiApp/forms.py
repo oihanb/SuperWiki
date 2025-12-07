@@ -6,6 +6,6 @@ class SuperHeroeForm(forms.ModelForm):
         model = SuperHeroe
         fields = ['nombre', 'poderes', 'Fnacimiento', 'imagenSuperHeroe']
         labels = {
-            'nombre': 'Nombre del Superhéroe',
+            'nombre': 'Superhero Name',
             'Fnacimiento': 'Año de Nacimiento (Año)',
         }
