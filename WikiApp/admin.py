@@ -14,8 +14,8 @@ class EditorialAdmin(admin.ModelAdmin):
     ]
     
     list_display=('nombre','propietario','anoFundacion')
-    #search_fields = ['nombre', 'propietario']
-    #list_filter = ['anoFundacion']
+    search_fields = ['nombre', 'propietario']
+    list_filter = ['anoFundacion']
 
 admin.site.register(Editorial, EditorialAdmin)
 
