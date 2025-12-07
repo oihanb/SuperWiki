@@ -3,6 +3,7 @@ from django.contrib import admin
 # Register your models here.
 from django.contrib import admin
 from .models import Editorial, GrupoDeSuperHeroes, SuperHeroe
+from .models import ContactMessage
 
 
 
@@ -41,5 +42,6 @@ class SuperheroeAdmin(admin.ModelAdmin):
     list_display=('nombre','Fnacimiento','poderes')
     #search_fields = ['nombre', 'poderes']
 admin.site.register(SuperHeroe, SuperheroeAdmin) 
+admin.site.register(ContactMessage)
 
 

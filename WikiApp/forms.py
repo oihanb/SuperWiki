@@ -1,6 +1,5 @@
-
 from django import forms
-from .models import SuperHeroe 
+from .models import SuperHeroe
 
 class SuperHeroeForm(forms.ModelForm):
     class Meta:

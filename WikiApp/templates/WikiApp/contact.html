@@ -1,81 +1,25 @@
-{% load static i18n %}
-<!DOCTYPE HTML>
-<html>
+{% extends 'WikiApp/base.html' %}
+{% load i18n %}
 
-<head>
-  <title>{% trans "colour_purple - contact us" %}</title>
-  <meta name="description" content="{% trans "website description" %}" />
-  <meta name="keywords" content="{% trans "website keywords, website keywords" %}" />
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" title="style" />
-</head>
+{% block contenido %}
+  <h1>{% trans "Contact Us" %}</h1>
 
-<body>
-  <div id="main">
-    <div id="header">
-      <div id="logo">
-        <div id="logo_text">
-          <!-- class="logo_colour", allows you to change the colour of the text -->
-          <h1><a href="index.html">colour<span class="logo_colour">purple</span></a></h1>
-          <h2>{% trans "Simple. Contemporary. Website Template." %}</h2>
-        </div>
-      </div>
-      <div id="menubar">
-        <ul id="menu">
-          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-          <li><a href="index.html">{% trans "Home" %}</a></li>
-          <li><a href="examples.html">{% trans "Examples" %}</a></li>
-          <li><a href="page.html">{% trans "A Page" %}</a></li>
-          <li><a href="another_page.html">{% trans "Another Page" %}</a></li>
-          <li class="selected"><a href="contact.html">{% trans "Contact Us" %}</a></li>
-        </ul>
-      </div>
-    </div>
-    <div id="content_header"></div>
-    <div id="site_content">
-      <div class="sidebar">
-      <!-- insert your sidebar items here -->
-      <h3>{% trans "About Us" %}</h3>
-      <h4>{% trans "What is this project about?" %}</h4>
-      <h5>{% trans "Web Engineering Project 2025-2026" %}</h5>
-      <p>{% blocktrans %}This project is developed with HTML, Python and Django. The project allows searching information about SuperHeroes.{% endblocktrans %}
-          <br />
-        <br /><a href="#">{% trans "Read more" %}</a></p>
-      <p></p>
-      <h4>{% trans "Who are we?" %}</h4>
-      <h5>{% trans "Deusto Engineering" %}</h5>
-      <p>{% trans "We are two students studying the Web Engineering course at the University of Deusto." %} 
-        <br /><a href="#">{% trans "Read more" %}</a></p>
-      <h3>{% trans "Authors" %}</h3>
-      <ul>
-        <li>Gaizka Gredilla</li>
-        <li>Oihan Bilbao Perez</li>
-      </ul>
-      <h3>{% trans "Search" %}</h3>
-      <form method="post" action="#" id="search_form">
-        <p>
-          <input class="search" type="text" name="search_field" value="{% trans "Enter keywords....." %}" />
-          <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="{% static 'style/search.png' %}" alt="{% trans 'Search' %}" title="{% trans 'Search' %}" />
-        </p>
-      </form>
-      </div>
-      <div id="content">
-        <!-- insert the page content here -->
-        <h1>{% trans "Contact us" %}</h1>
-        <form action="#" method="post">
-          <div class="form_settings">
-            <p><span>{% trans "Name" %}</span><input class="contact" type="text" name="your_name" value="" /></p>
-            <p><span>{% trans "Email" %}</span><input class="contact" type="text" name="your_email" value="" /></p>
-            <p><span>{% trans "Message" %}</span><textarea class="contact textarea" rows="8" cols="50" name="your_enquiry"></textarea></p>
-            <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="{% trans "Submit" %}" /></p>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div id="content_footer"></div>
-    <div id="footer">
-      Copyright &copy; colour_purple | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.html5webtemplates.co.uk">HTML5 Web Templates</a>
-    </div>
-  </div>
-</body>
-</html>
+  {% if messages %}
+    <ul class="messages">
+    {% for message in messages %}
+      <li class="{{ message.tags }}">{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  <form method="post" action="{% url 'contact' %}">
+    {% csrf_token %}
+    <table>
+      <tr><th>{{ form.name.label_tag }}</th><td>{{ form.name }}</td></tr>
+      <tr><th>{{ form.email.label_tag }}</th><td>{{ form.email }}</td></tr>
+      <tr><th>{{ form.message.label_tag }}</th><td>{{ form.message }}</td></tr>
+      <tr><td colspan="2"><button type="submit">{% trans "Submit" %}</button></td></tr>
+    </table>
+  </form>
+
+{% endblock %}

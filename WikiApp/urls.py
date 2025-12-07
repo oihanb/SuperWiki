@@ -25,4 +25,6 @@ urlpatterns = [
     #path('detalleFutbolista/<int:id_futbolista>/', views.detalleFutbolista,name='detalleFutbolista')
     path('detallesuperheroes/<int:pk>/', views.detalleSuperHeroe.as_view(),name='detallesuperheroes'),
     path('crearsuperheroe/', views.SuperHeroeCreateView.as_view(), name='crearsuperheroe'),
+    # Contact page
+    path('contact/', views.contact_view, name='contact'),
 ]

@@ -13,6 +13,31 @@ def index(request):
     return render(request, 'WikiApp/index.html')
 
 
+def contact_view(request):
+    from .forms import ContactForm
+    from django.contrib import messages
+    from django.utils.translation import gettext as _
+    from .models import ContactMessage
+
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # Guardar en BD
+            data = form.cleaned_data
+            ContactMessage.objects.create(
+                name=data.get('name'),
+                email=data.get('email'),
+                message=data.get('message')
+            )
+            # Mostrar mensaje de éxito
+            messages.success(request, _('Thank you for your message. We will get back to you soon.'))
+            form = ContactForm()
+    else:
+        form = ContactForm()
+
+    return render(request, 'WikiApp/contact.html', {'form': form})
+
+
 #VISTAS EDITORIAL
 class detalleEditorial(DetailView):
     model=Editorial
