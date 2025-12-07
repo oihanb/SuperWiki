@@ -2,7 +2,10 @@ from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render, get_object_or_404
 from .models import Editorial, GrupoDeSuperHeroes, SuperHeroe 
 
-from django.views.generic import ListView,DetailView
+from django.views.generic import ListView,DetailView, CreateView
+from django.urls import reverse_lazy
+from .forms import SuperHeroeForm 
+
 
 
 # Vistas de lista
@@ -43,3 +46,8 @@ class listaSuperHeroe(ListView):
     template_name='WikiApp/listasuperheroes.html'
     context_object_name='superheroes_list'
     queryset=SuperHeroe.objects.order_by('nombre')
+
+class SuperHeroeCreateView(CreateView):
+    form_class = SuperHeroeForm 
+    template_name = 'crearsuperheroe.html' 
+    success_url = reverse_lazy('listasuperheroes')
