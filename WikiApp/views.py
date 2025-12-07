@@ -1,10 +1,13 @@
+from django.contrib import messages
 from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render, get_object_or_404
-from .models import Editorial, GrupoDeSuperHeroes, SuperHeroe 
-
-from django.views.generic import ListView,DetailView, CreateView
 from django.urls import reverse_lazy
-from .forms import SuperHeroeForm 
+from django.utils.translation import gettext as _
+from django.views.generic import ListView, DetailView, CreateView
+
+from .forms import SuperHeroeForm
+from .forms_contact import ContactForm
+from .models import ContactMessage, Editorial, GrupoDeSuperHeroes, SuperHeroe
 
 
 
@@ -14,11 +17,6 @@ def index(request):
 
 
 def contact_view(request):
-    from .forms import ContactForm
-    from django.contrib import messages
-    from django.utils.translation import gettext as _
-    from .models import ContactMessage
-
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():

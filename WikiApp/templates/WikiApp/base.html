@@ -25,18 +25,13 @@
         <ul id="menu">
           <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
           <li><a href="{% url 'index'%}">{% trans "Home" %}</a></li>
-<<<<<<< HEAD
-           <li><a href="{%url 'listaeditorial'%}">{% trans "Editorials" %}</a></li>
+
+          <li><a href="{%url 'listaeditorial'%}">{% trans "Editorials" %}</a></li>
           <li><a href="{%url 'listagrupodesuperheroes'%}">{% trans "Groups" %}</a></li>
           <li><a href="{%url 'listasuperheroes'%}">{% trans "SuperHeroes" %}</a></li>
-          <li><a href="{%url 'crearsuperheroe'%}">{% trans "Add new" %}</a></li>
-=======
-          <li><a href="{% url 'listaeditorial' %}">{% trans "Editorials" %}</a></li>
-          <li><a href="{% url 'listagrupodesuperheroes' %}">{% trans "Groups" %}</a></li>
-          <li><a href="{% url 'listasuperheroes' %}">{% trans "SuperHeroes" %}</a></li>
           <li><a href="{% url 'contact' %}">{% trans "Contact" %}</a></li>
-          <li><a href="{%url 'crearsuperheroe'%}">{% trans "Crear Nuevo" %}</a></li>
->>>>>>> f1f6fe0393dc246154dd8a21adeae72c41e2daa1
+          <li><a href="{%url 'crearsuperheroe'%}">{% trans "Create New" %}</a></li>
+
         </ul>
         <div style="float:right; margin-right:20px;">
           <form action="/i18n/setlang/" method="post">
